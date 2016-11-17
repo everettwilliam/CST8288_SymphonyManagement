@@ -21,7 +21,7 @@ import java.util.ArrayList;
  * @author    Name
  * @version   1.0.0 Date
  */
-public class Performance extends ArrayList{
+public class Season extends ArrayList{
 
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
 	
@@ -49,4 +49,4 @@ public class Performance extends ArrayList{
 
 
 
-}	/*	End of CLASS:	Performance.java			*/
+}	/*	End of CLASS:	Season.java			*/

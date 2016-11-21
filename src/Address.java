@@ -14,6 +14,7 @@
  * Purpose -- 
  * **************************************************************/
 package symphony.domain;
+
 /**
  * Description of this class.
  * @author    Name
@@ -22,7 +23,7 @@ package symphony.domain;
 public class Address {
 	
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
-	
+	jhjdhjfhdkfhsdkfjhksdjf
 
 
 	/* ACCESSORS	-----------------------------------------------------	*/
@@ -47,4 +48,4 @@ public class Address {
 
 
 
-}	/*	End of CLASS:	Address.java			*/
+} /* End of CLASS: Address.java */

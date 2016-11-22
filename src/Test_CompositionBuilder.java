@@ -16,6 +16,11 @@
 package symphony.test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import symphony.domain.Identification;
+import symphony.domain.Name;
+import symphony.domain.Person;
+import symphony.domain.Composition;
+import symphony.domain.CompositionBuilder;
 import org.junit.Test;
 import org.junit.Before;
 /**
@@ -57,33 +62,111 @@ public class Test_CompositionBuilder extends TestCase{
 	 *************************************************************/
 	@Before
 	public void setUp() throws Exception {
-		System.out.println("Test_CompositionBuilder Begin");		
+		System.out.println("Test_CompositionBuilder Begin");
+		Identification id = new Identification();
+		id.setID("01test");
+		Name name = new Name();
+		name.setName("test");
+		builder = new CompositionBuilder(id, name);
+		Person composer = new Composer();
 	}
 
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
-	
+
+	/**
+	 * Test constructor
+	 *************************************************************/
+	@Test
+	public void testCompositionBuilderConstructor(){
+		System.out.println("\t\t Test_CompositionBuilder.testCompositionBuilderConstructor");		
+
+		assertTrue("\tTesting CompositionBuilder default constructor", builder instanceof CompositionBuilder);
+		assertNotNull("\tTesting CompositionBuilder default constructor", builder);
+	}
 
 
 	/* ACCESSORS	-----------------------------------------------------	*/
-	
 
+	/**
+	 * Test accessor
+	 *************************************************************/
+	@Test
+	public void testGetID(){
+		System.out.println("\t\t Test_CompositionBuilder.testGetID");	
+		
+		assertTrue("\tTesting CompositionBuilder testGetID method", builder.getID().toString().equals("01test"));
+	}
+	
+	@Test
+	public void testGetName(){
+		System.out.println("\t\t Test_CompositionBuilder.testGetName");	
+		
+		assertTrue("\tTesting CompositionBuilder testGetName method", builder.getName().toString().equals("test"));
+	}
+	
+	@Test
+	public void testGetComposer(){
+		
+		builder.composer(new )
+		System.out.println("\t\t Test_CompositionBuilder.testGetComposer");		
+		assertTrue("\tTesting CompositionBuilder testGetComposer method");
+	}
+	
+	@Test
+	public void testGetSoloist(){
+		System.out.println("\t\t Test_CompositionBuilder.testGetSoloist");	
+		
+		assertNull("\tTesting CompositionBuilder testGetSoloist method");
+		
+		assertNotNull("\tTesting CompositionBuilder testGetSoloist method");
+	}
+	
+	@Test
+	public void testGetMovement(){
+		System.out.println("\t\t Test_CompositionBuilder.testGetMovement");	
+		
+		assertNull("\tTesting CompositionBuilder testGetMovement method");		
+		assertNotNull("\tTesting CompositionBuilder testGetMovement method");
+	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
-	
-
-
 	/* NORMAL BEHAVIOR --------------------------------------------------	*/
 	
+	@Test
+	public void testComposer(){
+		System.out.println("\t\t Test_CompositionBuilder.testComposer");	
+		
+		assertNull("\tTesting CompositionBuilder testComposer method");		
+		assertNotNull("\tTesting CompositionBuilder testComposer method");
+	}
+	
+	@Test
+	public void testSoloist(){
+		System.out.println("\t\t Test_CompositionBuilder.testComposer");	
+		
+		assertNull("\tTesting CompositionBuilder testComposer method");		
+		assertNotNull("\tTesting CompositionBuilder testComposer method");
+	}
+	
+	@Test
+	public void testMovement(){
+		System.out.println("\t\t Test_CompositionBuilder.testComposer");	
+		
+		assertNull("\tTesting CompositionBuilder testComposer method");		
+		assertNotNull("\tTesting CompositionBuilder testComposer method");
+	}
+	
+	@Test
+	public void testBuild(){
+		System.out.println("\t\t Test_CompositionBuilder.testBuild");		
+		
+		assertTrue("\tTesting CompositionBuilder getCompositionBuilder method", builder.build() instanceof Composition);
+	}
 
-
-
+	
 	/* HELPER METHODS	--------------------------------------------------	*/
-
-
-
-
 	/* ATTRIBUTES	-----------------------------------------------------	*/											
 
-
+	private CompositionBuilder builder;
 
 }	/*	End of CLASS:	Test_CompositionBuilder.java			*/

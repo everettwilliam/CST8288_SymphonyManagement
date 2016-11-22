@@ -16,15 +16,20 @@
 package symphony.test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import symphony.domain.Composition;
+import symphony.domain.CompositionBuilder;
+import symphony.domain.Identification;
+import symphony.domain.Name;
+
 import org.junit.Test;
 import org.junit.Before;
 /**
  * Description of this class.
  * @author    Name
- * @version   1.0.0 Date
+ * @version   1.0.0 Composition
  */
 public class Test_Composition extends TestCase{
-	
+
 	/**
 	 * Default constructor that calls the superclass constructor
 	 * 
@@ -42,7 +47,7 @@ public class Test_Composition extends TestCase{
 	public static TestSuite suite() {
 		return new TestSuite(Test_Composition.class);
 	}
-	
+
 	/**
 	 * Prints message when test case has finished executing
 	 * 
@@ -50,40 +55,35 @@ public class Test_Composition extends TestCase{
 	protected void tearDown() throws Exception {
 		System.out.println("Test_Composition End");
 	}
-	
+
 	/**
 	 * 
 	 * 
 	 *************************************************************/
 	@Before
 	public void setUp() throws Exception {
-		System.out.println("Test_Composition Begin");		
+		System.out.println("Test_Composition Begin");	
+		builder = new CompositionBuilder(new Identification(),new Name());
 	}
 
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
-	
-
-
 	/* ACCESSORS	-----------------------------------------------------	*/
-	
 
+	/**
+	 * Test accessor
+	 *************************************************************/
+	@Test
+	public void testGetComposition(){
+		System.out.println("\t\t Test_Composition.testGetComposition");			
+				
+		assertTrue("\tTesting Composition getComposition method", Composition.getComposition(builder) instanceof Composition );
+	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
-	
-
-
 	/* NORMAL BEHAVIOR --------------------------------------------------	*/
-	
-
-
-
 	/* HELPER METHODS	--------------------------------------------------	*/
-
-
-
-
-	/* ATTRIBUTES	-----------------------------------------------------	*/											
-
-
+	/* ATTRIBUTES	-----------------------------------------------------	*/
+	
+	private CompositionBuilder builder;
 
 }	/*	End of CLASS:	Test_Composition.java			*/

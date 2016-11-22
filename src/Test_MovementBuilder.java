@@ -3,9 +3,9 @@
  * CST 8288 - Object Oriented Programming with Design Patterns
  * Project 1 - Symphony Management System
  * 
- * Author: 
- * Student #: 
- * Network login name: 
+ * Author: EVERETT HOLDEN
+ * Student #: 040812130
+ * Network login name: hold0052
  * Lab instructor: CAROLYN A. MACISAAC
  * Section: 014
  * Due date: 2016.11.27
@@ -16,12 +16,17 @@
 package symphony.test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import symphony.domain.Identification;
+import symphony.domain.Movement;
+import symphony.domain.MovementBuilder;
+import symphony.domain.Name;
+
 import org.junit.Test;
 import org.junit.Before;
 /**
  * Description of this class.
- * @author    Name
- * @version   1.0.0 Date
+ * @author    EVERETT HOLDEN	
+ * @version   1.0.0 2016.11.22
  */
 public class Test_MovementBuilder extends TestCase{
 	
@@ -57,33 +62,50 @@ public class Test_MovementBuilder extends TestCase{
 	 *************************************************************/
 	@Before
 	public void setUp() throws Exception {
-		System.out.println("Test_MovementBuilder Begin");		
+		System.out.println("Test_MovementBuilder Begin");	
+		builder = new MovementBuilder();
 	}
 
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
 	
-
-
+	@Test
+	public void testMovementBuliderConstructor(){
+		System.out.println("\t\t Test_MovementBuilder.testMovementBuliderConstructor");			
+				
+		assertTrue("\tTesting MovementBuilder MovementBulider Constructor", builder instanceof MovementBuilder );
+	}
 	/* ACCESSORS	-----------------------------------------------------	*/
-	
 
+	/**
+	 * Test accessor
+	 *************************************************************/
+	@Test
+	public void testBuild(){
+		System.out.println("\t\t Test_MovementBuilder.testBuild");			
+				
+		assertTrue("\tTesting MovementBuilder build method", builder.build() instanceof Movement );
+	}
+	
+	@Test
+	public void testMovementID(){
+		System.out.println("\t\t Test_MovementBuilder.testMovementID");			
+				
+		
+		assertTrue("\tTesting MovementBuilder movementID method", builder.movementID(new Identification()) instanceof MovementBuilder );
+	}
+	
+	@Test
+	public void testMovementName(){
+		System.out.println("\t\t Test_MovementBuilder.testMovementName");			
+				
+		assertTrue("\tTesting MovementBuilder movementName method", builder.movementName(new Name()) instanceof MovementBuilder );
+	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
-	
-
-
 	/* NORMAL BEHAVIOR --------------------------------------------------	*/
-	
-
-
-
 	/* HELPER METHODS	--------------------------------------------------	*/
-
-
-
-
-	/* ATTRIBUTES	-----------------------------------------------------	*/											
-
-
+	/* ATTRIBUTES	-----------------------------------------------------	*/
+	
+	private MovementBuilder builder;
 
 }	/*	End of CLASS:	Test_MovementBuilder.java			*/

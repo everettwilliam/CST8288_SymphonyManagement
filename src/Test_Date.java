@@ -16,6 +16,12 @@
 package symphony.test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import symphony.domain.Date;
+import symphony.domain.DateBuilder;
+import symphony.domain.Day;
+import symphony.domain.Month;
+import symphony.domain.Year;
+
 import org.junit.Test;
 import org.junit.Before;
 /**
@@ -24,7 +30,7 @@ import org.junit.Before;
  * @version   1.0.0 Date
  */
 public class Test_Date extends TestCase{
-	
+
 	/**
 	 * Default constructor that calls the superclass constructor
 	 * 
@@ -42,7 +48,7 @@ public class Test_Date extends TestCase{
 	public static TestSuite suite() {
 		return new TestSuite(Test_Date.class);
 	}
-	
+
 	/**
 	 * Prints message when test case has finished executing
 	 * 
@@ -50,40 +56,35 @@ public class Test_Date extends TestCase{
 	protected void tearDown() throws Exception {
 		System.out.println("Test_Date End");
 	}
-	
+
 	/**
 	 * 
 	 * 
 	 *************************************************************/
 	@Before
 	public void setUp() throws Exception {
-		System.out.println("Test_Date Begin");		
+		System.out.println("Test_Date Begin");	
+		builder = new DateBuilder(new Year(2016),new Month(11),new Day(21));
 	}
 
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
-	
-
-
 	/* ACCESSORS	-----------------------------------------------------	*/
-	
 
+	/**
+	 * Test accessor
+	 *************************************************************/
+	@Test
+	public void testGetDate(){
+		System.out.println("\t\t Test_Date.testGetDate");			
+				
+		assertTrue("\tTesting Date getDate method", Date.getDate(builder) instanceof Date );
+	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
-	
-
-
 	/* NORMAL BEHAVIOR --------------------------------------------------	*/
-	
-
-
-
 	/* HELPER METHODS	--------------------------------------------------	*/
-
-
-
-
-	/* ATTRIBUTES	-----------------------------------------------------	*/											
-
-
+	/* ATTRIBUTES	-----------------------------------------------------	*/
+	
+	private DateBuilder builder;
 
 }	/*	End of CLASS:	Test_Date.java			*/

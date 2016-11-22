@@ -3,7 +3,7 @@
  * CST 8288 - Object Oriented Programming with Design Patterns
  * Project 1 - Symphony Management System
  * 
- * Author: 
+ * Author: Nadia Chubarev
  * Student #: 
  * Network login name: 
  * Lab instructor: CAROLYN A. MACISAAC
@@ -16,36 +16,62 @@
 package symphony.domain;
 
 /**
- * Description of this class.
- * @author    Name
- * @version   1.0.0 Date
+ * This class displays the address
+ * 
+ * 
+ * @author Nadia Chubarev
+ * @version 1.0.0 November 20, 2016
  */
-public class Address {
-	
-	/* CONSTRUCTORS	-----------------------------------------------------	*/
-	jhjdhjfhdkfhsdkfjhksdjf
+public class Address{
 
+	/* CONSTRUCTORS ----------------------------------------------------- */
 
-	/* ACCESSORS	-----------------------------------------------------	*/
-	
+	/** Default constructor */
+	public Address() {
+		
+	}
 
+	/* ACCESSORS ----------------------------------------------------- */
 
-	/* MODIFIERS	-----------------------------------------------------	*/
-	
+	/**
+	 * get method for address
+	 * 
+	 * @return address of type String
+	 */
+	public String getAddress() {
+		return address;
+	}
 
+	/* MODIFIERS ----------------------------------------------------- */
 
-	/* NORMAL BEHAVIOR --------------------------------------------------	*/
-	
+	/**
+	 * set method for address
+	 * 
+	 * @param address
+	 *            is an input to the function as a String
+	 */
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
+	/* NORMAL BEHAVIOR -------------------------------------------------- */
 
+	/**
+	 * toString method is a string representation of a the data
+	 * 
+	 * @return displays the address
+	 */
+	public String toString() {
+		return "The address is: " + address;
+	}
 
-	/* HELPER METHODS	--------------------------------------------------	*/
+	/* HELPER METHODS -------------------------------------------------- */
 
+	/* ATTRIBUTES ----------------------------------------------------- */
+	/**
+	 * String is used for address input
+	 */
 
-
-
-	/* ATTRIBUTES	-----------------------------------------------------	*/											
-
-
+	private String address;
 
 } /* End of CLASS: Address.java */

@@ -14,37 +14,55 @@
  * Purpose -- 
  * **************************************************************/
 package symphony.domain;
+
 /**
- * Description of this class.
- * @author    Name
- * @version   1.0.0 Date
+ * This class builds a Day parameter
+ * 
+ * @author Nadia Chubarev
+ * @version 1.0.0 November, 2016
  */
 public class Day {
 
-	/* CONSTRUCTORS	-----------------------------------------------------	*/
-	
+	/* CONSTRUCTORS ----------------------------------------------------- */
 
+	/**
+	 * constructor for Day class
+	 * 
+	 */
 
-	/* ACCESSORS	-----------------------------------------------------	*/
-	
+	public Day(int day) {
+		this.day = day;
+	}
 
+	/* ACCESSORS ----------------------------------------------------- */
+	/**
+	 * get method for the day
+	 * 
+	 * @return day of type integer
+	 */
 
-	/* MODIFIERS	-----------------------------------------------------	*/
-	
+	public int getDay() {
+		return day;
+	}
+	/* MODIFIERS ----------------------------------------------------- */
 
+	/**
+	 * set method for the day
+	 * 
+	 * @param day
+	 *            is an integer input to the function
+	 */
+	public void setDay(int day) {
+		this.day = day;
+	}
+	/* NORMAL BEHAVIOR -------------------------------------------------- */
 
-	/* NORMAL BEHAVIOR --------------------------------------------------	*/
-	
+	/* HELPER METHODS -------------------------------------------------- */
 
+	/* ATTRIBUTES ----------------------------------------------------- */
+	/**
+	 * integer is used for day input
+	 */
+	private int day;
 
-
-	/* HELPER METHODS	--------------------------------------------------	*/
-
-
-
-
-	/* ATTRIBUTES	-----------------------------------------------------	*/											
-
-
-
-}	/*	End of CLASS:	Day.java			*/
+} /* End of CLASS: Day.java */

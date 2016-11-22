@@ -3,9 +3,9 @@
  * CST 8288 - Object Oriented Programming with Design Patterns
  * Project 1 - Symphony Management System
  * 
- * Author: 
- * Student #: 
- * Network login name: 
+ * Author: EVERETT HOLDEN
+ * Student #: 040812130
+ * Network login name: hold0052
  * Lab instructor: CAROLYN A. MACISAAC
  * Section: 014
  * Due date: 2016.11.27
@@ -14,8 +14,10 @@
  * Purpose -- 
  * **************************************************************/
 package symphony.test;
+
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import symphony.domain.Identification;
 import org.junit.Test;
 import org.junit.Before;
 /**
@@ -57,33 +59,63 @@ public class Test_Identification extends TestCase{
 	 *************************************************************/
 	@Before
 	public void setUp() throws Exception {
-		System.out.println("Test_Identification Begin");		
+		System.out.println("Test_Identification Begin");	
+		identification = new Identification();
 	}
 	
-	/* CONSTRUCTORS	-----------------------------------------------------	*/
+/* CONSTRUCTORS	-----------------------------------------------------	*/
 	
+	/**
+	 * Test constructor
+	 *************************************************************/
+	@Test
+	public void testIDConstructor(){
+		System.out.println("\t\t Test_ID.testIdentificationConstructor");
+		
+		Identification test = new Identification();
+		
+		assertTrue("\tTesting ID default constructor", test instanceof Identification);
+		assertNotNull("\tTesting ID default constructor", test);
+	}
 
 
 	/* ACCESSORS	-----------------------------------------------------	*/
 	
-
+	/**
+	 * Test accessor
+	 *************************************************************/
+	@Test
+	public void testGetID(){
+		System.out.println("\t\t Test_ID.testGetID");
+		
+		String id = "040812130";
+		identification.setID(id);
+		
+		assertTrue("\tTesting ID getID method", identification.getID().equals(id));
+		
+	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
 	
-
+	/**
+	 * Test modifier
+	 *************************************************************/
+	@Test
+	public void testSetID(){
+		System.out.println("\t\t Test_ID.testSetID");
+		
+		String id = "040812130";
+		identification.setID(id);
+		
+		assertTrue("\tTesting ID setID method", identification.getID().equals(id));		
+	
+	}
 
 	/* NORMAL BEHAVIOR --------------------------------------------------	*/
-	
-
-
-
 	/* HELPER METHODS	--------------------------------------------------	*/
-
-
-
-
 	/* ATTRIBUTES	-----------------------------------------------------	*/											
 
+	Identification identification;
 
 
 }	/*	End of CLASS:	Test_Identification.java			*/

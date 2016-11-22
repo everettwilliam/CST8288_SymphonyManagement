@@ -14,37 +14,113 @@
  * Purpose -- 
  * **************************************************************/
 package symphony.domain;
+
 /**
- * Description of this class.
- * @author    Name
- * @version   1.0.0 Date
+ * This class helps to assemble all date components together and is used by Date
+ * class
+ * 
+ * @author Nadia Chubarev
+ * @version 1.0.0 November 20, 2016
  */
 public class DateBuilder {
 
-	/* CONSTRUCTORS	-----------------------------------------------------	*/
+	/* CONSTRUCTORS ----------------------------------------------------- */
+	/**
+	 * constructor
+	 * 
+	 * @param year
+	 *            of type Year
+	 * @param month
+	 *            of type Month
+	 * @param day
+	 *            of type Day
+	 */
+	public DateBuilder(Year year, Month month, Day day) {
+		this.day = day;
+		this.month = month;
+		this.year = year;
+
+	}
+
+	/* ACCESSORS ----------------------------------------------------- */
+	/**
+	 * method for setting time of Date object
+	 * 
+	 * @param time Time object
+	 */
+	public DateBuilder time(Time time){
+		this.time = time;
+		return this;
+	}
 	
+	/**
+	 * get method for the Day class
+	 * 
+	 * @return day object
+	 */
+	public Day getDay() {
+		return day;
+	}
 
+	/**
+	 * get method for the Month class
+	 * 
+	 * @return month object
+	 */
+	public Month getMonth() {
+		return month;
+	}
 
-	/* ACCESSORS	-----------------------------------------------------	*/
-	
+	/**
+	 * get method for the Year class
+	 * 
+	 * @return year object
+	 */
+	public Year getYear() {
+		return year;
+	}
 
+	/**
+	 * get method for the Time class
+	 * 
+	 * @return time object
+	 */
+	public Time getTime() {
+		return time;
+	}
 
-	/* MODIFIERS	-----------------------------------------------------	*/
-	
+	/* NORMAL BEHAVIOR -------------------------------------------------- */
+	/* HELPER METHODS -------------------------------------------------- */
 
+	/**
+	 * method 
+	 * @param time object of class Time
+	 * @return db is an object of type DateBuilder
+	 */
 
-	/* NORMAL BEHAVIOR --------------------------------------------------	*/
-	
+	public Date build() {
+		return Date.getDate(this);
+	}
 
+	/* ATTRIBUTES ----------------------------------------------------- */
+	/**
+	 * Year is used for year input
+	 */
+	private Year year;
 
+	/**
+	 * Month is used for month input
+	 */
+	private Month month;
 
-	/* HELPER METHODS	--------------------------------------------------	*/
+	/**
+	 * Day is used for day input
+	 */
+	private Day day;
 
+	/**
+	 * Time is used for time input
+	 */
+	private Time time;
 
-
-
-	/* ATTRIBUTES	-----------------------------------------------------	*/											
-
-
-
-}	/*	End of CLASS:	DateBuilder.java			*/
+} /* End of CLASS: DateBuilder.java */

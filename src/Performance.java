@@ -14,14 +14,12 @@
  * Purpose -- 
  * **************************************************************/
 package symphony.domain;
-
-import java.util.ArrayList;
 /**
  * Description of this class.
  * @author    Name
  * @version   1.0.0 Date
  */
-public class Performance extends ArrayList{
+public class Performance {
 
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
 	

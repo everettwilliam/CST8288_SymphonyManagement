@@ -3,9 +3,9 @@
  * CST 8288 - Object Oriented Programming with Design Patterns
  * Project 1 - Symphony Management System
  * 
- * Author: 
- * Student #: 
- * Network login name: 
+ * Author: EVERETT HOLDEN
+ * Student #: 040812130
+ * Network login name: hold0052
  * Lab instructor: CAROLYN A. MACISAAC
  * Section: 014
  * Due date: 2016.11.27
@@ -16,6 +16,8 @@
 package symphony.test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import symphony.domain.Movement;
+import symphony.domain.MovementBuilder;
 import org.junit.Test;
 import org.junit.Before;
 /**
@@ -57,33 +59,29 @@ public class Test_Movement extends TestCase{
 	 *************************************************************/
 	@Before
 	public void setUp() throws Exception {
-		System.out.println("Test_Movement Begin");		
+		System.out.println("Test_Movement Begin");
+		
+		builder = new MovementBuilder();	
 	}
 
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
-	
-
-
 	/* ACCESSORS	-----------------------------------------------------	*/
-	
 
+	/**
+	 * Test accessor
+	 *************************************************************/
+	@Test
+	public void testGetMovement(){
+		System.out.println("\t\t Test_Movement.testGetMovement");			
+				
+		assertTrue("\tTesting Movement getMovement method", Movement.getMovement(builder) instanceof Movement );
+	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
-	
-
-
 	/* NORMAL BEHAVIOR --------------------------------------------------	*/
-	
-
-
-
 	/* HELPER METHODS	--------------------------------------------------	*/
-
-
-
-
-	/* ATTRIBUTES	-----------------------------------------------------	*/											
-
-
+	/* ATTRIBUTES	-----------------------------------------------------	*/
+	
+	private MovementBuilder builder;
 
 }	/*	End of CLASS:	Test_Movement.java			*/

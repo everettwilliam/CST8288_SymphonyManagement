@@ -3,9 +3,9 @@
  * CST 8288 - Object Oriented Programming with Design Patterns
  * Project 1 - Symphony Management System
  * 
- * Author: 
- * Student #: 
- * Network login name: 
+ * Author: EVERETT HOLDEN
+ * Student #: 040812130
+ * Network login name: hold0052
  * Lab instructor: CAROLYN A. MACISAAC
  * Section: 014
  * Due date: 2016.11.27
@@ -16,12 +16,14 @@
 package symphony.test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import symphony.domain.Year;
+
 import org.junit.Test;
 import org.junit.Before;
 /**
  * Description of this class.
- * @author    Name
- * @version   1.0.0 Date
+ * @author    EVERETT HOLDEN
+ * @version   1.0.0 2016.11.20
  */
 public class Test_Year extends TestCase{
 	
@@ -58,32 +60,57 @@ public class Test_Year extends TestCase{
 	@Before
 	public void setUp() throws Exception {
 		System.out.println("Test_Year Begin");		
+		year = new Year(2016);
 	}
 
-	/* CONSTRUCTORS	-----------------------------------------------------	*/
+/* CONSTRUCTORS	-----------------------------------------------------	*/
 	
+	/**
+	 * Test constructor
+	 *************************************************************/
+	@Test
+	public void testYearConstructor(){
+		System.out.println("\t\t Test_Year.testYearConstructor");
+		
+		Year test = new Year(2012);
+		
+		assertTrue("\tTesting Year default constructor", test instanceof Year);
+		assertNotNull("\tTesting Year default constructor", test);
+	}
 
 
 	/* ACCESSORS	-----------------------------------------------------	*/
 	
-
+	/**
+	 * Test accessor
+	 *************************************************************/
+	@Test
+	public void testGetYear(){
+		System.out.println("\t\t Test_Year.testGetYear");				
+				
+		assertTrue("\tTesting Year getYear method", year.getYear() == 2016);
+		
+	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
 	
-
+	/**
+	 * Test modifier
+	 *************************************************************/
+	@Test
+	public void testSetYear(){
+		System.out.println("\t\t Test_Year.testSetYear");		
+	
+		year.setYear(2005);		
+		
+		assertFalse("\tTesting Year setYear method", year.getYear() == 2016);		
+	
+	}
 
 	/* NORMAL BEHAVIOR --------------------------------------------------	*/
-	
-
-
-
 	/* HELPER METHODS	--------------------------------------------------	*/
-
-
-
-
 	/* ATTRIBUTES	-----------------------------------------------------	*/											
 
-
+	private Year year;	
 
 }	/*	End of CLASS:	Test_Year.java			*/

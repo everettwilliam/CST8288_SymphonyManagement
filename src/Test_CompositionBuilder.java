@@ -3,9 +3,9 @@
  * CST 8288 - Object Oriented Programming with Design Patterns
  * Project 1 - Symphony Management System
  * 
- * Author: 
- * Student #: 
- * Network login name: 
+ * Author: EVERETT HOLDEN
+ * Student #: 040812130
+ * Network login name: hold0052
  * Lab instructor: CAROLYN A. MACISAAC
  * Section: 014
  * Due date: 2016.11.27
@@ -24,9 +24,9 @@ import symphony.domain.CompositionBuilder;
 import org.junit.Test;
 import org.junit.Before;
 /**
- * Description of this class.
- * @author    Name
- * @version   1.0.0 Date
+ * Test class for CompositionBuilder
+ * @author    EVERETT HOLDEN
+ * @version   1.0.0 2016.11.23
  */
 public class Test_CompositionBuilder extends TestCase{
 	
@@ -63,7 +63,7 @@ public class Test_CompositionBuilder extends TestCase{
 	@Before
 	public void setUp() throws Exception {
 		System.out.println("Test_CompositionBuilder Begin");
-		Identification id = new Identification();
+		Identification id = new Identification("test");
 		id.setID("01test");
 		Name name = new Name();
 		name.setName("test");
@@ -107,7 +107,7 @@ public class Test_CompositionBuilder extends TestCase{
 	@Test
 	public void testGetComposer(){
 		
-		builder.composer(new )
+		builder.composer(new );
 		System.out.println("\t\t Test_CompositionBuilder.testGetComposer");		
 		assertTrue("\tTesting CompositionBuilder testGetComposer method");
 	}

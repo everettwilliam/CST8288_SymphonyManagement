@@ -51,6 +51,15 @@ public class Date {
 	/* NORMAL BEHAVIOR -------------------------------------------------- */
 
 	/* HELPER METHODS -------------------------------------------------- */
+	
+	/**
+	 * 
+	 * 
+	 * @return string instance of date
+	 */
+	public String toString(){
+		return String.format("%d%d%d", year.getYear(),month.getMonth(),day.getDay());
+	}
 
 	/* ATTRIBUTES ----------------------------------------------------- */
 	/**

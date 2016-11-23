@@ -28,8 +28,8 @@ public class Identification {
 	 * constructor for Identification class
 	 */
 
-	public Identification() {
-
+	public Identification(String id) {
+		this.id = id;
 	}
 
 	/* ACCESSORS ----------------------------------------------------- */
@@ -56,9 +56,7 @@ public class Identification {
 		this.id = id;
 	}
 	/* NORMAL BEHAVIOR -------------------------------------------------- */
-
 	/* HELPER METHODS -------------------------------------------------- */
-
 	/* ATTRIBUTES ----------------------------------------------------- */
 
 	/** String is used for id input */

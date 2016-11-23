@@ -14,109 +14,112 @@
  * Purpose -- 
  * **************************************************************/
 package symphony.test;
-
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import symphony.domain.Identification;
+import symphony.domain.CreditCard;
+import symphony.domain.DebitCard;
+import symphony.domain.Person;
 import org.junit.Test;
 import org.junit.Before;
 /**
- * Test class for Identification
+ * Description of this class.
  * @author    EVERETT HOLDEN
  * @version   1.0.0 2016.11.23
  */
-public class Test_Identification extends TestCase{
-	
+public class Test_CreditCard extends TestCase{
+
 	/**
 	 * Default constructor that calls the superclass constructor
 	 * 
 	 * @param name the name of the test
 	 *************************************************************/
-	public Test_Identification(String name) {
+	public Test_CreditCard(String name) {
 		super(name);
 	}
 
 	/**
-	 * Creates an instance of a TestSuite and passes the Test_Identification
+	 * Creates an instance of a TestSuite and passes the Test_CreditCard
 	 * class as a parameter.	 
 	 * @return an instance of TestSuite
 	 *************************************************************/
 	public static TestSuite suite() {
-		return new TestSuite(Test_Identification.class);
+		return new TestSuite(Test_CreditCard.class);
 	}
-	
+
 	/**
 	 * Prints message when test case has finished executing
 	 * 
 	 *************************************************************/
 	protected void tearDown() throws Exception {
-		System.out.println("Test_Identification End");
+		System.out.println("Test_CreditCard End");
 	}
-	
+
 	/**
 	 * 
 	 * 
 	 *************************************************************/
 	@Before
 	public void setUp() throws Exception {
-		System.out.println("Test_Identification Begin");	
-		identification = new Identification("test");
+		System.out.println("Test_CreditCard Begin");	
+
+		card = new CreditCard(0010010100111111l);
+		card.setCardHolder();
+
 	}
-	
-/* CONSTRUCTORS	-----------------------------------------------------	*/
-	
+
+	/* CONSTRUCTORS	-----------------------------------------------------	*/
+
 	/**
 	 * Test constructor
 	 *************************************************************/
 	@Test
-	public void testIDConstructor(){
-		System.out.println("\t\t Test_ID.testIdentificationConstructor");
-		
-		Identification test = new Identification("test");
-		
-		assertTrue("\tTesting ID default constructor", test instanceof Identification);
-		assertNotNull("\tTesting ID default constructor", test);
+	public void testCreditCardConstructor(){
+		System.out.println("\t\t Test_CreditCard.testCreditCardConstructor");
+
+		CreditCard test = new CreditCard(0000101001011111l);
+
+		assertTrue("\tTesting CreditCard constructor", test instanceof CreditCard);
+		assertNotNull("\tTesting CreditCard constructor", test);
 	}
 
 
 	/* ACCESSORS	-----------------------------------------------------	*/
-	
-	/**
-	 * Test accessor
-	 *************************************************************/
+
 	@Test
-	public void testGetID(){
-		System.out.println("\t\t Test_ID.testGetID");
+	public void testGetCardNumber(){
+		System.out.println("\t\t Test_CreditCard.testGetCardNumber");		
+
+		assertTrue("\tTesting CreditCard getCardNumber method", card.getCardNumber() == 0010010100111111l);
+	}
+
+	@Test
+	public void testGetCardHolder(){
+		System.out.println("\t\t Test_CreditCard.testGetCardHolder");		
 		
-		String id = "040812130";
-		identification.setID(id);
-		
-		assertTrue("\tTesting ID getID method", identification.getID().equals(id));
-		assertFalse("\tTesting ID getID method", identification.getID().equals("test"));
-		
+
 	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
-	
-	/**
-	 * Test modifier
-	 *************************************************************/
+
 	@Test
-	public void testSetID(){
-		System.out.println("\t\t Test_ID.testSetID");
-		
-		String id = "040812130";
-		identification.setID(id);
-		
-		assertTrue("\tTesting ID setID method", identification.getID().equals(id));		
-	
+	public void testSetCardNumber(){
+		System.out.println("\t\t Test_CreditCard.testSetCardNumber");		
+
+
 	}
 
-	/* NORMAL BEHAVIOR --------------------------------------------------	*/
+	@Test
+	public void testSetCardHolder(){
+		System.out.println("\t\t Test_CreditCard.testSetCardHolder");		
+
+
+	}
+
+
+	/* NORMAL BEHAVIOR --------------------------------------------------	*/	
 	/* HELPER METHODS	--------------------------------------------------	*/
 	/* ATTRIBUTES	-----------------------------------------------------	*/											
+	CreditCard card;
 
-	Identification identification;
 
-
-}	/*	End of CLASS:	Test_Identification.java			*/
+}	/*	End of CLASS:	Test_CreditCard.java			*/

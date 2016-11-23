@@ -14,109 +14,117 @@
  * Purpose -- 
  * **************************************************************/
 package symphony.test;
-
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import symphony.domain.Identification;
+import symphony.domain.DebitCard;
 import org.junit.Test;
 import org.junit.Before;
 /**
- * Test class for Identification
+ * Description of this class.
  * @author    EVERETT HOLDEN
  * @version   1.0.0 2016.11.23
  */
-public class Test_Identification extends TestCase{
-	
+public class Test_DebitCard extends TestCase{
+
 	/**
 	 * Default constructor that calls the superclass constructor
 	 * 
 	 * @param name the name of the test
 	 *************************************************************/
-	public Test_Identification(String name) {
+	public Test_DebitCard(String name) {
 		super(name);
 	}
 
 	/**
-	 * Creates an instance of a TestSuite and passes the Test_Identification
+	 * Creates an instance of a TestSuite and passes the Test_DebitCard
 	 * class as a parameter.	 
 	 * @return an instance of TestSuite
 	 *************************************************************/
 	public static TestSuite suite() {
-		return new TestSuite(Test_Identification.class);
+		return new TestSuite(Test_DebitCard.class);
 	}
-	
+
 	/**
 	 * Prints message when test case has finished executing
 	 * 
 	 *************************************************************/
 	protected void tearDown() throws Exception {
-		System.out.println("Test_Identification End");
+		System.out.println("Test_DebitCard End");
 	}
-	
+
 	/**
 	 * 
 	 * 
 	 *************************************************************/
 	@Before
 	public void setUp() throws Exception {
-		System.out.println("Test_Identification Begin");	
-		identification = new Identification("test");
+		System.out.println("Test_DebitCard Begin");	
+		card = new DebitCard(0000101001011111l);
 	}
-	
-/* CONSTRUCTORS	-----------------------------------------------------	*/
-	
+
+	/* CONSTRUCTORS	-----------------------------------------------------	*/
+
 	/**
 	 * Test constructor
 	 *************************************************************/
 	@Test
-	public void testIDConstructor(){
-		System.out.println("\t\t Test_ID.testIdentificationConstructor");
-		
-		Identification test = new Identification("test");
-		
-		assertTrue("\tTesting ID default constructor", test instanceof Identification);
-		assertNotNull("\tTesting ID default constructor", test);
+	public void testDebitCardConstructor(){
+		System.out.println("\t\t Test_DebitCard.testDebitCardConstructor");
+
+		DebitCard test = new DebitCard(0000101001011111l);
+
+		assertTrue("\tTesting DebitCard constructor", test instanceof DebitCard);
+		assertNotNull("\tTesting DebitCard constructor", test);
 	}
 
-
 	/* ACCESSORS	-----------------------------------------------------	*/
-	
-	/**
-	 * Test accessor
-	 *************************************************************/
+
 	@Test
-	public void testGetID(){
-		System.out.println("\t\t Test_ID.testGetID");
-		
-		String id = "040812130";
-		identification.setID(id);
-		
-		assertTrue("\tTesting ID getID method", identification.getID().equals(id));
-		assertFalse("\tTesting ID getID method", identification.getID().equals("test"));
-		
+	public void testGetAccountNumber(){
+		System.out.println("\t\t Test_DebitCard.testGetAccountNumber");		
+
+		assertTrue("\tTesting DebitCard getAccountNumber method", card.getAccountNumber() == 0000101001011111l);
+	}
+
+	@Test
+	public void testGetAccountHolder(){
+		System.out.println("\t\t Test_DebitCard.testGetCardHolder");		
+
+
 	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
-	
-	/**
-	 * Test modifier
-	 *************************************************************/
+
 	@Test
-	public void testSetID(){
-		System.out.println("\t\t Test_ID.testSetID");
-		
-		String id = "040812130";
-		identification.setID(id);
-		
-		assertTrue("\tTesting ID setID method", identification.getID().equals(id));		
-	
+	public void testSetAccountNumber(){
+		System.out.println("\t\t Test_DebitCard.testSetAccountNumber");		
+
+
 	}
 
+	@Test
+	public void testSetAccountHolder(){
+		System.out.println("\t\t Test_CreditCard.testSetAccountHolder");		
+
+
+	}
+
+	/* MODIFIERS	-----------------------------------------------------	*/
+
+
+
 	/* NORMAL BEHAVIOR --------------------------------------------------	*/
+
+
+
+
 	/* HELPER METHODS	--------------------------------------------------	*/
+
+
+
+
 	/* ATTRIBUTES	-----------------------------------------------------	*/											
+	DebitCard card;
 
-	Identification identification;
 
-
-}	/*	End of CLASS:	Test_Identification.java			*/
+}	/*	End of CLASS:	Test_DebitCard.java			*/

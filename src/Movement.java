@@ -15,8 +15,6 @@
  * **************************************************************/
 package symphony.domain;
 
-import symphony.domain.MovementBuilder;
-
 /**
  * This class uses MovementBuilder to create a Movement.
  * Movement is used by Composition.
@@ -27,7 +25,7 @@ import symphony.domain.MovementBuilder;
 public class Movement {
 
 	/**
-	 * This method sets the Movement variables using getters from MovementBuilder.
+	 * This constructor sets the Movement variables using getters from MovementBuilder.
 	 * 
 	 * @param	builder		MovementBuilder
 	 */
@@ -37,7 +35,7 @@ public class Movement {
 	}
 	
 	/**
-	 * This method returns the current Movement.
+	 * This method returns an instance of a Movement.
 	 * 
 	 * @param	builder		MovementBuilder
 	 * @return	Movement

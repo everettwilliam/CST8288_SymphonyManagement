@@ -63,7 +63,7 @@ public class Test_Composition extends TestCase{
 	@Before
 	public void setUp() throws Exception {
 		System.out.println("Test_Composition Begin");	
-		builder = new CompositionBuilder(new Identification(),new Name());
+		builder = new CompositionBuilder(new Identification("test"),new Name());
 	}
 
 	/* CONSTRUCTORS	-----------------------------------------------------	*/

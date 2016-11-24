@@ -60,7 +60,7 @@ public class Test_Phone extends TestCase{
 	@Before
 	public void setUp() throws Exception {
 		System.out.println("Test_Phone Begin");
-		phone = new Phone();
+		phone = new Phone("555-1111");
 	}
 	
 /* CONSTRUCTORS	-----------------------------------------------------	*/
@@ -70,9 +70,8 @@ public class Test_Phone extends TestCase{
 	 *************************************************************/
 	@Test
 	public void testPhoneConstructor(){
-		System.out.println("\t\t Test_Phone.testPhoneConstructor");
-		
-		phone = new Phone();
+		System.out.println("\t\t Test_Phone.testPhoneConstructor");		
+	
 		
 		assertTrue("\tTesting Phone default constructor", phone instanceof Phone);
 		assertNotNull("\tTesting Phone default constructor", phone);
@@ -88,8 +87,8 @@ public class Test_Phone extends TestCase{
 	public void testGetPhone(){
 		System.out.println("\t\t Test_Phone.testGetPhone");		
 		
-		phone.setPhone("555-5555");		
-		assertTrue("\tTesting Phone getPhone method", phone.getPhone().equals("555-5555"));
+			
+		assertTrue("\tTesting Phone getPhone method", phone.getPhone().equals("555-1111"));
 		
 	}
 
@@ -102,11 +101,8 @@ public class Test_Phone extends TestCase{
 	public void testSetPhone(){
 		System.out.println("\t\t Test_Phone.testSetPhone");		
 	
-		phone.setPhone("555-5555");
-		Phone test = new Phone();
-		test.setPhone("555-5555");
-		
-		assertTrue("\tTesting Phone setPhone method", phone.getPhone() == test.getPhone());		
+		phone.setPhone("555-5555");		
+		assertFalse("\tTesting Phone setPhone method", phone.getPhone().equals("555-1111"));		
 	
 	}
 

@@ -19,6 +19,9 @@ import junit.framework.TestSuite;
 import symphony.domain.Identification;
 import symphony.domain.Name;
 import symphony.domain.Person;
+import symphony.domain.Phone;
+import symphony.domain.Address;
+import symphony.domain.Composer;
 import symphony.domain.Composition;
 import symphony.domain.CompositionBuilder;
 import org.junit.Test;
@@ -68,7 +71,7 @@ public class Test_CompositionBuilder extends TestCase{
 		Name name = new Name();
 		name.setName("test");
 		builder = new CompositionBuilder(id, name);
-		Person composer = new Composer();
+		Person composer = new Composer(new Name(), new Address, new Phone(),);
 	}
 
 	/* CONSTRUCTORS	-----------------------------------------------------	*/

@@ -91,7 +91,7 @@ public class Test_MovementBuilder extends TestCase{
 		System.out.println("\t\t Test_MovementBuilder.testMovementID");			
 				
 		
-		assertTrue("\tTesting MovementBuilder movementID method", builder.movementID(new Identification()) instanceof MovementBuilder );
+		assertTrue("\tTesting MovementBuilder movementID method", builder.movementID(new Identification("test")) instanceof MovementBuilder );
 	}
 	
 	@Test

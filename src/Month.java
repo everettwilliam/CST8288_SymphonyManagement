@@ -22,34 +22,39 @@ package symphony.domain;
 public class Month {
 	
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
-	public Month(int month) 
-	{
+	
+	/**
+	 * Constructor sets month
+	 * @param month
+	 *************************************************************/
+	public Month(int month) {
 		this.setMonth(month);
 	}
 
 	/* ACCESSORS	-----------------------------------------------------	*/
 	
+	/**
+	 * Returns the value for month
+	 * @param year
+	 *************************************************************/
 	public int getMonth() {
 		return month;
 	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
 	
+	/**
+	 * Sets the value for month
+	 * @param year
+	 *************************************************************/
 	public void setMonth(int month) {
 		this.month = month;
 	}
 
 	/* NORMAL BEHAVIOR --------------------------------------------------	*/
-	
-
-
-
 	/* HELPER METHODS	--------------------------------------------------	*/
-
-
-
-
-	/* ATTRIBUTES	-----------------------------------------------------	*/											
+	/* ATTRIBUTES	-----------------------------------------------------	*/
+	/** stores a value for month*/
 	private int month;
 
 

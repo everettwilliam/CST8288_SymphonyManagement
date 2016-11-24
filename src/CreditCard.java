@@ -24,6 +24,7 @@ public class CreditCard{
 	
 	
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
+	
 	/**
 	 * Default constructor 
 	 * 

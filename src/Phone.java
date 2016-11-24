@@ -22,24 +22,40 @@ package symphony.domain;
 public class Phone {
 	
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
-	public Phone(){}
+	
+	/**
+	 * Constructor sets phone number
+	 * @param phoneNumber
+	 *************************************************************/
+	public Phone(String phoneNumber){
+		this.phoneNumber = phoneNumber;
+	}
 
 	/* ACCESSORS	-----------------------------------------------------	*/
+	
+	/**
+	 * Returns the string for phone number
+	 * @return phoneNumber
+	 *************************************************************/
 	public String getPhone() {
 		return phoneNumber;
 	}
 	
 	/* MODIFIERS	-----------------------------------------------------	*/
+	
+	/**
+	 * Sets the string for phone number
+	 * @param phoneNumber
+	 *************************************************************/
 	public void setPhone(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}	
 	
 	/* NORMAL BEHAVIOR --------------------------------------------------	*/
-
-	/* HELPER METHODS	--------------------------------------------------	*/
-
-	//	public String toString(){}
+	/* HELPER METHODS	--------------------------------------------------	*/	
+	/* ATTRIBUTES	-----------------------------------------------------	*/
 	
-	/* ATTRIBUTES	-----------------------------------------------------	*/											
+	/** stores a string for phone number*/
 	private String phoneNumber;
+	
 }	/*	End of CLASS:	Phone.java			*/

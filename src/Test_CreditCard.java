@@ -17,6 +17,7 @@ package symphony.test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import symphony.domain.CreditCard;
+import symphony.domain.Customer;
 import symphony.domain.DebitCard;
 import symphony.domain.Person;
 import org.junit.Test;
@@ -63,7 +64,7 @@ public class Test_CreditCard extends TestCase{
 		System.out.println("Test_CreditCard Begin");	
 
 		card = new CreditCard(0010010100111111l);
-		card.setCardHolder();
+		card.setCardHolder(new Customer());
 
 	}
 
@@ -96,7 +97,7 @@ public class Test_CreditCard extends TestCase{
 	public void testGetCardHolder(){
 		System.out.println("\t\t Test_CreditCard.testGetCardHolder");		
 		
-
+		assertTrue("\tTesting CreditCard getCardHolder method", card.getCardHolder() instanceof Person);
 	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/

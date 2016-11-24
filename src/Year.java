@@ -22,24 +22,40 @@ package symphony.domain;
 public class Year {
 
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
+	
+	/**
+	 * Constructor sets year
+	 * @param year
+	 *************************************************************/
 	public Year(int year){
 		this.setYear(year);
 	}
+	
 	/* ACCESSORS	-----------------------------------------------------	*/
+	
+	/**
+	 * Returns the year value
+	 * @return year
+	 *************************************************************/
 	public int getYear() {
 		return year;
 	}
-
+	
+	/* MODIFIERS	-----------------------------------------------------	*/
+	
+	/**
+	 * Sets the value of year
+	 * @param year
+	 *************************************************************/
 	public void setYear(int year) {
 		this.year = year;
 	}
-	/* MODIFIERS	-----------------------------------------------------	*/
-
-	/* NORMAL BEHAVIOR --------------------------------------------------	*/
 	
+	/* NORMAL BEHAVIOR --------------------------------------------------	*/	
 	/* HELPER METHODS	--------------------------------------------------	*/
-
-	/* ATTRIBUTES	-----------------------------------------------------	*/											
+	/* ATTRIBUTES	-----------------------------------------------------	*/
+	
+	/** stores a value representing a calendar year*/
 	private int year;
 
 }	/*	End of CLASS:	Year.java			*/

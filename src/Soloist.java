@@ -13,8 +13,6 @@
  * **************************************************************/
 package symphony.domain;
 
-import java.util.Vector;
-
 /**
  * This class extends Person to create Soloist.
  * Soloist adds a String to hold the expertise of this Soloist.

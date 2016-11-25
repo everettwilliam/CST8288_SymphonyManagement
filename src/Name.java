@@ -22,12 +22,27 @@ package symphony.domain;
 public class Name {
 	
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
+	/**
+	 * Default constructor
+	 *************************************************************/
 	public Name(){}
+	
+	public Name(String name){
+		this.name = name;
+	}
 
 	/* ACCESSORS	-----------------------------------------------------	*/
+	/**
+	 * Returns the string value for name
+	 * @return name
+	 *************************************************************/
 	public String getName() {
 		return name;
 	}
+	/**
+	 * Sets the value of name
+	 * @param name
+	 *************************************************************/
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -37,11 +52,16 @@ public class Name {
 	/* NORMAL BEHAVIOR --------------------------------------------------	*/
 	
 	/* HELPER METHODS	--------------------------------------------------	*/
+	/**
+	 * Returns a string of the name
+	 * @return name
+	 *************************************************************/
 	public String toString(){
 		return "Name:" + getName();
 	}
 	
-	/* ATTRIBUTES	-----------------------------------------------------	*/											
+	/* ATTRIBUTES	-----------------------------------------------------	*/		
+    /** stores the value of a name*/
 	private String name;
 
 }/*	End of CLASS:	Name.java			*/

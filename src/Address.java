@@ -30,6 +30,10 @@ public class Address{
 	public Address() {
 		
 	}
+	
+	public Address(String address){
+		this.address = address;
+	}
 
 	/* ACCESSORS ----------------------------------------------------- */
 

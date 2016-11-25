@@ -59,7 +59,7 @@ public class CreditCard{
 	 * Sets the account number associated with the credit card
 	 * @param accountNumber 
 	 *************************************************************/	
-	public void setCardNumber(int cardNumber){
+	public void setCardNumber(long cardNumber){
 		this.cardNumber = cardNumber;
 	}
 	

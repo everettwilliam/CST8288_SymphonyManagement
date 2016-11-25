@@ -17,14 +17,20 @@ package symphony.test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import symphony.domain.Identification;
+import symphony.domain.Movement;
+import symphony.domain.MovementBuilder;
 import symphony.domain.Name;
 import symphony.domain.Person;
 import symphony.domain.Phone;
+import symphony.domain.Soloist;
 import symphony.domain.Address;
 import symphony.domain.Composer;
 import symphony.domain.Composition;
 import symphony.domain.CompositionBuilder;
 import org.junit.Test;
+
+import java.util.Vector;
+
 import org.junit.Before;
 /**
  * Test class for CompositionBuilder
@@ -66,12 +72,19 @@ public class Test_CompositionBuilder extends TestCase{
 	@Before
 	public void setUp() throws Exception {
 		System.out.println("Test_CompositionBuilder Begin");
-		Identification id = new Identification("test");
-		id.setID("01test");
+		Identification id = new Identification("test");		
 		Name name = new Name();
 		name.setName("test");
 		builder = new CompositionBuilder(id, name);
-		Person composer = new Composer(new Name(), new Address, new Phone(),);
+		Vector<Soloist> soloists = new Vector<>();
+		Vector<Composition> composition = new Vector<>();
+		Vector<Movement> movements = new Vector<>();
+		Movement movement = new MovementBuilder().build();
+		movements.add(movement);
+		Composer composer = new Composer(new Name(), new Address(), new Phone("test"), composition );
+		Soloist soloist = new Soloist(new Name(), new Address(), new Phone("test"), "Violinist");
+		soloists.add(soloist);
+		builder.composer(composer).soloist(soloists).composer(composer).movement(movements);
 	}
 
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
@@ -97,39 +110,38 @@ public class Test_CompositionBuilder extends TestCase{
 	public void testGetID(){
 		System.out.println("\t\t Test_CompositionBuilder.testGetID");	
 		
-		assertTrue("\tTesting CompositionBuilder testGetID method", builder.getID().toString().equals("01test"));
+		assertTrue("\tTesting CompositionBuilder testGetID method", builder.getID().getID().equals("test"));
 	}
 	
 	@Test
 	public void testGetName(){
 		System.out.println("\t\t Test_CompositionBuilder.testGetName");	
 		
-		assertTrue("\tTesting CompositionBuilder testGetName method", builder.getName().toString().equals("test"));
+		assertTrue("\tTesting CompositionBuilder testGetName method", builder.getName().getName().equals("test"));
 	}
 	
 	@Test
-	public void testGetComposer(){
+	public void testGetComposer(){		
+		System.out.println("\t\t Test_CompositionBuilder.testGetComposer");	
 		
-		builder.composer(new );
-		System.out.println("\t\t Test_CompositionBuilder.testGetComposer");		
-		assertTrue("\tTesting CompositionBuilder testGetComposer method");
+		assertTrue("\tTesting CompositionBuilder testGetComposer method", builder.getComposer() instanceof Person);
+		assertNotNull("\tTesting CompositionBuilder testGetSoloist method", builder.getComposer());
 	}
 	
 	@Test
 	public void testGetSoloist(){
 		System.out.println("\t\t Test_CompositionBuilder.testGetSoloist");	
 		
-		assertNull("\tTesting CompositionBuilder testGetSoloist method");
-		
-		assertNotNull("\tTesting CompositionBuilder testGetSoloist method");
+		assertTrue("\tTesting CompositionBuilder testGetSoloist method", builder.getComposer() instanceof Person);		
+		assertNotNull("\tTesting CompositionBuilder testGetSoloist method", builder.getComposer());
 	}
 	
 	@Test
 	public void testGetMovement(){
 		System.out.println("\t\t Test_CompositionBuilder.testGetMovement");	
 		
-		assertNull("\tTesting CompositionBuilder testGetMovement method");		
-		assertNotNull("\tTesting CompositionBuilder testGetMovement method");
+		assertTrue("\tTesting CompositionBuilder testGetMovement method", builder.getMovement().get(0) instanceof Movement);		
+		assertNotNull("\tTesting CompositionBuilder testGetMovement method", builder.getMovement().get(0));
 	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
@@ -137,26 +149,30 @@ public class Test_CompositionBuilder extends TestCase{
 	
 	@Test
 	public void testComposer(){
-		System.out.println("\t\t Test_CompositionBuilder.testComposer");	
+		System.out.println("\t\t Test_CompositionBuilder.testComposer");
 		
-		assertNull("\tTesting CompositionBuilder testComposer method");		
-		assertNotNull("\tTesting CompositionBuilder testComposer method");
+		Vector<Composition> composition = new Vector<>();
+		Composer composer = new Composer(new Name(), new Address(), new Phone("test"), composition);
+		
+		assertTrue("\tTesting CompositionBuilder testComposer method", builder.composer(composer) instanceof CompositionBuilder);	
 	}
 	
 	@Test
 	public void testSoloist(){
-		System.out.println("\t\t Test_CompositionBuilder.testComposer");	
+		System.out.println("\t\t Test_CompositionBuilder.testSoloist");	
 		
-		assertNull("\tTesting CompositionBuilder testComposer method");		
-		assertNotNull("\tTesting CompositionBuilder testComposer method");
+		Vector<Soloist> soloists = new Vector<>();
+		
+		assertTrue("\tTesting CompositionBuilder testComposer method", builder.soloist(soloists) instanceof CompositionBuilder);	
 	}
 	
 	@Test
 	public void testMovement(){
-		System.out.println("\t\t Test_CompositionBuilder.testComposer");	
+		System.out.println("\t\t Test_CompositionBuilder.testMovement");	
 		
-		assertNull("\tTesting CompositionBuilder testComposer method");		
-		assertNotNull("\tTesting CompositionBuilder testComposer method");
+		Vector<Movement> movements = new Vector<>();
+		
+		assertTrue("\tTesting CompositionBuilder testComposer method", builder.movement(movements) instanceof CompositionBuilder);		
 	}
 	
 	@Test

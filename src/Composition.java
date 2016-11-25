@@ -65,7 +65,7 @@ public class Composition {
 	/**
 	 * This holds the name of the Composer for this composition.
 	 */
-	private Person composer;
+	private Composer composer;
 	
 	/**
 	 * This holds a reference to the soloists of this composition.

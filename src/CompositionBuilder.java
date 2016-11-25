@@ -61,7 +61,7 @@ public class CompositionBuilder {
 	 * 
 	 * @return	String	composer
 	 */
-	public Person getComposer() {
+	public Composer getComposer() {
 		return this.composer;
 	}
 	
@@ -98,7 +98,7 @@ public class CompositionBuilder {
 	 * @param 	composer	String
 	 * @return	CompositionBuilder
 	 */
-	public CompositionBuilder composer(Person composer) {
+	public CompositionBuilder composer(Composer composer) {
 		this.composer = composer;
 		return this;
 	}
@@ -140,7 +140,7 @@ public class CompositionBuilder {
 	/**
 	 * This holds the name of the Composer for this composition.
 	 */
-	private Person composer;
+	private Composer composer;
 	
 	/**
 	 * This holds a reference to the soloists of this composition.

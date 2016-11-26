@@ -42,7 +42,7 @@ public class Venue {
 	/**
 	 * Get the concerts that happen in this venue.
 	 * 
-	 * @return	Vector<Concert>
+	 * @return	Vector&lt;Concert&gt;
 	 */
 	public Vector<Concert> getConcerts() {
 		return this.concerts;
@@ -69,7 +69,7 @@ public class Venue {
 	/**
 	 * Get the tickets for this venue.
 	 * 
-	 * @return	Vector<Ticket>
+	 * @return	Vector&lt;Ticket&gt;
 	 */
 	public Vector<Ticket> getTickets() {
 		return this.tickets;
@@ -80,7 +80,7 @@ public class Venue {
 	/**
 	 * Add the concerts that are happening in the venue.
 	 * 
-	 * @param	concerts	Vector<Concert>
+	 * @param	concerts	Vector&lt;Concert&gt;
 	 */
 	public void setConcerts(Vector<Concert> concerts) {
 		this.concerts = concerts;
@@ -89,7 +89,7 @@ public class Venue {
 	/**
 	 * Add the tickets for this venue.
 	 * 
-	 * @param	tickets		Vector<Ticket>
+	 * @param	tickets		Vector&lt;Ticket&gt;
 	 */
 	public void setTickets(Vector<Ticket> tickets) {
 		this.tickets = tickets;

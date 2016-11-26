@@ -34,14 +34,14 @@ public class Name {
 	/* ACCESSORS	-----------------------------------------------------	*/
 	/**
 	 * Returns the string value for name
-	 * @return name
+	 * @return name the string representing a name encapulated by this class
 	 *************************************************************/
 	public String getName() {
 		return name;
 	}
 	/**
 	 * Sets the value of name
-	 * @param name
+	 * @param name the string representing a name encapulated by this class
 	 *************************************************************/
 	public void setName(String name) {
 		this.name = name;
@@ -54,7 +54,7 @@ public class Name {
 	/* HELPER METHODS	--------------------------------------------------	*/
 	/**
 	 * Returns a string of the name
-	 * @return name
+	 * @return name a formatted string representing a name encapulated by this class
 	 *************************************************************/
 	public String toString(){
 		return "Name:" + getName();

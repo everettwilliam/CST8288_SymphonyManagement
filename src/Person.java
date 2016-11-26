@@ -32,9 +32,9 @@ public abstract class Person {
 	
 	/**
 	 * Constructor sets name, address and phone
-	 * @param name
-	 * @param address
-	 * @param phone
+	 * @param name the name of a person
+	 * @param address the address where a person resided
+	 * @param phone a persons contact number
 	 *************************************************************/
 	public Person(Name name, Address address, Phone phone){
 		this.name = name;
@@ -46,7 +46,7 @@ public abstract class Person {
 	
 	/**
 	 * Returns the name object for the person
-	 * @return name
+	 * @return name the name of a person
 	 *************************************************************/
 	public Name getName(){
 		return name;
@@ -54,7 +54,7 @@ public abstract class Person {
 	
 	/**
 	 * Returns the address object for the person
-	 * @return address
+	 * @return address the address where a person resided
 	 *************************************************************/
 	public Address getAddress(){
 		return address;
@@ -62,7 +62,7 @@ public abstract class Person {
 	
 	/**
 	 * Returns the phone object for the person
-	 * @return phone
+	 * @return phone a persons contact number
 	 *************************************************************/
 	public Phone getPhone(){
 		return phone;
@@ -70,7 +70,7 @@ public abstract class Person {
 	
 	/**
 	 *Returns the id object for the person
-	 *@return id
+	 *@return id a unique identifier for a person
 	 *************************************************************/
 	public Identification getIdentification(){
 		return id;
@@ -82,14 +82,14 @@ public abstract class Person {
 	
 	/**
 	 * Sets the name of the person
-	 * @param name
+	 * @param name the name of a person
 	 *************************************************************/
 	public void setName(Name name){
 		this.name = name;
 	}
 	/**
 	 * Sets the address of the person
-	 * @param address
+	 * @param address the address where a person resides
 	 *************************************************************/
 	public void setAddress(Address address){
 		this.address = address;
@@ -97,7 +97,7 @@ public abstract class Person {
 	
 	/**
 	 * Sets the phone of the person
-	 * @param phone
+	 * @param phone a persons contect number
 	 *************************************************************/
 	public void setPhone(Phone phone){
 		this.phone = phone;
@@ -105,7 +105,7 @@ public abstract class Person {
 	
 	/**
 	 * Sets the id of the person
-	 * @param id
+	 * @param id a unique identifier for a person
 	 *************************************************************/
 	public void setID(Identification id){
 		this.id = id;

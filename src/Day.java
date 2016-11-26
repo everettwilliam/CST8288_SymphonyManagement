@@ -27,7 +27,7 @@ public class Day {
 
 	/**
 	 * constructor for Day class
-	 * 
+	 * @param day an int representing a day
 	 */
 
 	public Day(int day) {

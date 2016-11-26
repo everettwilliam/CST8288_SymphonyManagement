@@ -41,6 +41,7 @@ public class Date {
 	/**
 	 * get method for the Date
 	 * 
+	 * @param builder the builder of Date objects
 	 * @return instance of date
 	 */
 	public static Date getDate(DateBuilder builder) {

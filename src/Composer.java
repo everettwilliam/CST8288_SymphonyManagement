@@ -17,8 +17,8 @@ import java.util.Vector;
 
 /**
  * This class extends Person to create Composer.
- * Composer adds Vector<Composition> to hold the Compositions by this Composer.
- * It includes the getter and setter for Vector<Composition>.
+ * Composer adds Vector&lt;Composition&gt; to hold the Compositions by this Composer.
+ * It includes the getter and setter for Vector&lt;Composition&gt;.
  * 
  * @author    Victoria Sawyer
  * @version   1.0.0 2016-11-22
@@ -30,12 +30,12 @@ public class Composer extends Person {
 	/**
 	 * Composer uses the super constructor from person to set Name, Address, and Phone.
 	 * It makes use of Name, Address, Phone, and Composition.
-	 * This constructor also sets compositions which is a Vector<Composition>.
+	 * This constructor also sets compositions which is a Vector&lt;Composition&gt;.
 	 * 
 	 * @param 	name			Name
 	 * @param 	address			Address
 	 * @param 	phone			Phone
-	 * @param 	compositions	Vector<Composition>
+	 * @param 	compositions	Vector&lt;Composition&gt;
 	 */
 	public Composer(Name name, Address address, Phone phone, Vector<Composition> compositions) {
 		super(name, address, phone);
@@ -48,7 +48,7 @@ public class Composer extends Person {
 	/**
 	 * Get a Vector of Compositions created by this Composer.
 	 * 
-	 * @return	Vector<Composition>
+	 * @return composition a vector with one or more compositions
 	 */
 	public Vector<Composition> getCompositions() {
 		return this.compositions;
@@ -59,7 +59,7 @@ public class Composer extends Person {
 	/**
 	 * Set the Vector of Compositions created by this Composer.
 	 * 
-	 * @param 	compositions	Vector<Composition>
+	 * @param 	compositions	a vector with one or more compositions
 	 */
 	public void setCompositions(Vector<Composition> compositions) {
 		this.compositions = compositions;

@@ -24,7 +24,12 @@ import java.util.Vector;
 public class Transaction {
 
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
-	
+	/**
+	 * Constructor instantiates a transaction
+	 * @param id the unique identifier for the transaction
+	 * @param tickets the tickets purchased in this transaction
+	 * @param date the date the transaction occurred
+	 */
 	public Transaction(Identification id, Vector<Ticket> tickets, Date date) {
 		this.id = id;
 		this.tickets = tickets;
@@ -36,7 +41,7 @@ public class Transaction {
 	/**
 	 * Get a Vector of Tickets sold in this Transaction.
 	 * 
-	 * @return	Vector<Ticket>
+	 * @return	Vector&lt;Ticket&gt; a vector with one or many tickets
 	 */
 	public Vector<Ticket> getTickets() {
 		return tickets;
@@ -44,7 +49,7 @@ public class Transaction {
 	
 	/**
 	 * Get the total cost of this Transaction.
-	 * @return	double
+	 * @return total the total cost of the transaction
 	 */
 	public double getTotal() {
 		return total;
@@ -53,7 +58,7 @@ public class Transaction {
 	/**
 	 * Get the uniqiue Identification of this Transaction.
 	 * 
-	 * @return	Identification
+	 * @return id the unique identifier of the transaction
 	 */
 	public Identification getId() {
 		return id;
@@ -62,7 +67,7 @@ public class Transaction {
 	/**
 	 * Get the PayMethod of this Transaction.
 	 * 
-	 * @return	PayMethod
+	 * @return	payment the pay method used to make the transaction
 	 */
 	public PayMethod getPayment() {
 		return payment;
@@ -71,7 +76,7 @@ public class Transaction {
 	/**
 	 * Get the Date when this Transaction is performed.
 	 *  
-	 * @return	Date
+	 * @return	date the date the transaction occurred
 	 */
 	public Date getDate() {
 		return date;
@@ -82,7 +87,7 @@ public class Transaction {
 	/**
 	 * Set the total cost of the transaction.
 	 * 
-	 * @param total
+	 * @param tickets the tickets purchased in the transaction
 	 */
 	public void setTotal(Vector<Ticket> tickets) {
 		Iterator<Ticket> iterator = tickets.iterator();
@@ -90,13 +95,23 @@ public class Transaction {
 			total += iterator.next().getPrice();
 		}
 	}
-
+	
+	/**
+	 * Sets the PayMethod used in the transaction
+	 * 
+	 * @param payment the pay method for the transaction
+	 */
 	public void setPayment(PayMethod payment) {
 		this.payment = payment;
 	}
 	
 	/* HELPER METHODS	--------------------------------------------------	*/
-
+	
+	/**
+	 * Returns a formatted string of the object
+	 * 
+	 * @return a formatted string of the object
+	 */
 	public String toString() {
 		return "ID: " + id + ", Date: " + date + ", Tickets: " + tickets + ", Total: $" + total + ", Payment Method: " + payment;
 	}

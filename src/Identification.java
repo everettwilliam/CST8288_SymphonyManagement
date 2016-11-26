@@ -26,6 +26,7 @@ public class Identification {
 	/* CONSTRUCTORS ----------------------------------------------------- */
 	/**
 	 * constructor for Identification class
+	 * @param id the unique identifier encapsulated by this class
 	 */
 
 	public Identification(String id) {
@@ -37,7 +38,7 @@ public class Identification {
 	/**
 	 * get method for the id
 	 * 
-	 * @return id of type String
+	 * @return id the unique identifier encapsulated by this class
 	 */
 
 	public String getID() {
@@ -48,8 +49,8 @@ public class Identification {
 	/**
 	 * set method for id
 	 * 
-	 * @param id
-	 *            is an input to the function as a String
+	 * @param id the unique identifier encapsulated by this class
+	 *           is an input to the function as a String
 	 */
 
 	public void setID(String id) {

@@ -68,7 +68,7 @@ public class CompositionBuilder {
 	/**
 	 * This method gets the soloists of the composition.
 	 * 
-	 * @return	Vector<Soloist>
+	 * @return	Vector&lt;Soloist&gt; a vector with one or many soloists
 	 */
 	public Vector<Soloist> getSoloist() {
 		return this.soloist;
@@ -77,7 +77,7 @@ public class CompositionBuilder {
 	/**
 	 * This method gets the movements of the composition.
 	 * 
-	 * @return	Vector<Movement>
+	 * @return	Vector&lt;Movement&gt; a vector of one or many movements
 	 */
 	public Vector<Movement> getMovement() {
 		return this.movement;
@@ -107,8 +107,8 @@ public class CompositionBuilder {
 	 * This method sets the soloists of the Composition.
 	 * There can be 0 or more solosits.
 	 * 
-	 * @param 	soloist		Vector<Soloist>
-	 * @return	CompositionBuilder
+	 * @param 	soloist		Vector&lt;Soloist&gt; a vector of one or many soloists
+	 * @return	CompositionBuilder the builder of the Composition class
 	 */
 	public CompositionBuilder soloist(Vector<Soloist> soloist) {
 		this.soloist = soloist;
@@ -119,8 +119,8 @@ public class CompositionBuilder {
 	 * This method sets the movements of the Composition.
 	 * There can be 1 or more movements.
 	 * 
-	 * @param 	movement	Vector<Movement>
-	 * @return	CompositionBuilder
+	 * @param 	movement	Vector&lt;Movement&gt; a vector of one or many movements
+	 * @return	CompositionBuilder the builder of the Composition class
 	 */
 	public CompositionBuilder movement(Vector<Movement> movement) {
 		this.movement = movement;

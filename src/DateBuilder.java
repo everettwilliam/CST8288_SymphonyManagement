@@ -47,6 +47,7 @@ public class DateBuilder {
 	 * method for setting time of Date object
 	 * 
 	 * @param time Time object
+	 * @return the instance of the DateBuilder
 	 */
 	public DateBuilder time(Time time){
 		this.time = time;
@@ -93,9 +94,9 @@ public class DateBuilder {
 	/* HELPER METHODS -------------------------------------------------- */
 
 	/**
-	 * method 
-	 * @param time object of class Time
-	 * @return db is an object of type DateBuilder
+	 * Instantiates a Date object
+	 * 
+	 * @return  an object of type Date
 	 */
 
 	public Date build() {

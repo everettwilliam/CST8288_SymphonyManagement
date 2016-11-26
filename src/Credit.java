@@ -61,7 +61,7 @@ public class Credit implements PayMethod{
 	
 	/**
 	 * Sets the credit transaction id
-	 * @param id
+	 * @param id a unique identifier for a credit payment
 	 *************************************************************/
 	@Override
 	public void setID(Identification id) {
@@ -70,7 +70,7 @@ public class Credit implements PayMethod{
 
 	/**
 	 * Sets the credit transaction date
-	 * @param date 
+	 * @param date the date of the credit payment
 	 *************************************************************/
 	@Override
 	public void setDate(Date date) {
@@ -79,7 +79,7 @@ public class Credit implements PayMethod{
 
 	/**
 	 * Sets the credit card associated with the transaction
-	 * @param card 
+	 * @param card the credit card associated with the credit payment
 	 *************************************************************/
 	public void setCard(CreditCard card){
 		this.creditCard = card;

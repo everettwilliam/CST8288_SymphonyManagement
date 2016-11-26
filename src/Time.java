@@ -32,7 +32,7 @@ public class Time {
 
 	/**
 	 * Returns the value for hour
-	 * @return hour
+	 * @return hour the value representing the hours in a time stamp
 	 *************************************************************/
 	public int getHour() {
 		return hour;
@@ -40,7 +40,7 @@ public class Time {
 
 	/**
 	 * Returns the value for minute
-	 * @return minute
+	 * @param minute the value representing the minutes in a time stamp
 	 *************************************************************/
 	public void setMinute(int minute) {
 		this.minute = minute;
@@ -48,7 +48,7 @@ public class Time {
 
 	/**
 	 * Returns the value for second
-	 * @return second
+	 * @return second the value representing the seconds in a time stamp
 	 *************************************************************/
 	public int getSecond() {
 		return second;
@@ -58,7 +58,7 @@ public class Time {
 
 	/**
 	 * Sets the value for hour
-	 * @param hour
+	 * @param hour the value representing the hours in a time stamp
 	 *************************************************************/
 	public void setHour(int hour) {
 		this.hour = hour;
@@ -66,7 +66,7 @@ public class Time {
 
 	/**
 	 * Sets the value for minute
-	 * @param minute 
+	 * @return minute the value representing the minutes in a time stamp
 	 *************************************************************/
 	public int getMinute() {
 		return minute;
@@ -74,7 +74,7 @@ public class Time {
 
 	/**
 	 * Sets the value for second
-	 * @param second
+	 * @param second the value representing the seconds in a time stamp
 	 **************************************************************/
 	public void setSecond(int second) {
 		this.second = second;
@@ -85,7 +85,7 @@ public class Time {
 
 	/**
 	 * toString method returns a string representation of the time
-	 * @return string
+	 * @return string formatted string representing the time
 	 *************************************************************/
 	public String toString(){
 		return "Time(Hour:Minute):" + getHour() +":" + getMinute();

@@ -61,7 +61,7 @@ public class Debit implements PayMethod{
 	
 	/**
 	 * Set the debit transaction id
-	 * @param id
+	 * @param id a unique identifier for the debit payment
 	 *************************************************************/
 	@Override
 	public void setID(Identification id) {
@@ -70,7 +70,7 @@ public class Debit implements PayMethod{
 
 	/**
 	 * Set the date of the debit transaction 
-	 * @param date
+	 * @param date the date of the debit payment
 	 *************************************************************/
 	@Override
 	public void setDate(Date date) {
@@ -79,7 +79,7 @@ public class Debit implements PayMethod{
 
 	/**
 	 * Set the debit card associated with the debit transaction
-	 * @param card
+	 * @param card the debit card associated with the debit payment
 	 *************************************************************/
 	public void setCard(DebitCard card){
 		this.debitCard = card;

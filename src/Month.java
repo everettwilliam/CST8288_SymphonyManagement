@@ -25,7 +25,7 @@ public class Month {
 	
 	/**
 	 * Constructor sets month
-	 * @param month
+	 * @param month the value of the month
 	 *************************************************************/
 	public Month(int month) {
 		this.setMonth(month);
@@ -35,7 +35,7 @@ public class Month {
 	
 	/**
 	 * Returns the value for month
-	 * @param year
+	 * @return month the value representing the month
 	 *************************************************************/
 	public int getMonth() {
 		return month;
@@ -45,7 +45,7 @@ public class Month {
 	
 	/**
 	 * Sets the value for month
-	 * @param year
+	 * @param month the value representing the month
 	 *************************************************************/
 	public void setMonth(int month) {
 		this.month = month;

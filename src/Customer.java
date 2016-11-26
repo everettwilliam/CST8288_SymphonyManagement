@@ -25,9 +25,9 @@ public class Customer extends Person{
 	
 	/**
 	 * Constructor sets name, address and phone
-	 * @param name
-	 * @param address
-	 * @param phone
+	 * @param name the name of the customer
+	 * @param address the address where the customer resides
+	 * @param phone the customers contact number
 	 *************************************************************/
 	public Customer(Name name, Address address, Phone phone){
 		super(name, address, phone);

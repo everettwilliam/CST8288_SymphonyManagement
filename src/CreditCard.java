@@ -27,7 +27,7 @@ public class CreditCard{
 	
 	/**
 	 * Default constructor 
-	 * 
+	 * @param cardNumber a long representing the credit card number
 	 *************************************************************/
 	public CreditCard(long cardNumber){
 		this.cardNumber = cardNumber;
@@ -38,7 +38,7 @@ public class CreditCard{
 	
 	/**
 	 * Returns the account number associated with the credit card
-	 *@return accountNumber 
+	 *@return cardNumber the credit card number
 	 *************************************************************/
 	public long getCardNumber(){
 		return cardNumber;
@@ -46,7 +46,7 @@ public class CreditCard{
 	
 	/**
 	 * Returns the Person who owns the credit card
-	 *@return accountHolder 
+	 *@return cardHolder the person who owns the credit card
 	 *************************************************************/
 	public Person getCardHolder(){
 		return cardHolder;
@@ -57,7 +57,7 @@ public class CreditCard{
 	
 	/**
 	 * Sets the account number associated with the credit card
-	 * @param accountNumber 
+	 * @param cardNumber the credit card number
 	 *************************************************************/	
 	public void setCardNumber(long cardNumber){
 		this.cardNumber = cardNumber;
@@ -65,7 +65,7 @@ public class CreditCard{
 	
 	/**
 	 * Sets the Person who owns the credit card
-	 * @param accountHolder
+	 * @param cardHolder the person who owns the credit card
 	 *************************************************************/
 	public void setCardHolder(Person cardHolder){
 		this.cardHolder = cardHolder;

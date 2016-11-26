@@ -25,7 +25,7 @@ public class Year {
 	
 	/**
 	 * Constructor sets year
-	 * @param year
+	 * @param year the value of the year encapsulated by this class
 	 *************************************************************/
 	public Year(int year){
 		this.setYear(year);
@@ -35,7 +35,7 @@ public class Year {
 	
 	/**
 	 * Returns the year value
-	 * @return year
+	 * @return year the value of the year encapsulated by this class
 	 *************************************************************/
 	public int getYear() {
 		return year;
@@ -45,7 +45,7 @@ public class Year {
 	
 	/**
 	 * Sets the value of year
-	 * @param year
+	 * @param year the value of the year encapsulated by this class
 	 *************************************************************/
 	public void setYear(int year) {
 		this.year = year;

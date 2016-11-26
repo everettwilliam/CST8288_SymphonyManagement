@@ -27,7 +27,7 @@ public class DebitCard{
 
 	/**
 	 * Default constructor 
-	 * 
+	 * @param accountNumber a long representing the account number
 	 *************************************************************/
 	public DebitCard(long accountNumber){
 		this.accountNumber = accountNumber;
@@ -38,7 +38,7 @@ public class DebitCard{
 	
 	/**
 	 * Returns the account number associated with the debit card
-	 *@return accountNumber 
+	 * @return accountNumber a long representing the account number
 	 *************************************************************/
 	public long getAccountNumber(){
 		return accountNumber;
@@ -46,7 +46,7 @@ public class DebitCard{
 	
 	/**
 	 * Returns the Person who owns the account and debit card
-	 *@return accountHolder 
+	 * @return accountHolder the person who owns the account
 	 *************************************************************/
 	public Person getAccountHolder(){
 		return accountHolder;
@@ -57,7 +57,7 @@ public class DebitCard{
 	
 	/**
 	 * Sets the account number associated with the debit card
-	 * @param accountNumber 
+	 * @param accountNumber the account number of associated with the debit card
 	 *************************************************************/
 	public void setAccountNumber(int accountNumber){
 		this.accountNumber = accountNumber;
@@ -65,7 +65,7 @@ public class DebitCard{
 	
 	/**
 	 * Sets the Person who owns the account
-	 * @param accountHolder
+	 * @param accountHolder the person who owns the account
 	 *************************************************************/
 	public void setAccountHolder(Person accountHolder){
 		this.accountHolder = accountHolder;

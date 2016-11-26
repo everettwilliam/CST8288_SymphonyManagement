@@ -25,7 +25,7 @@ public class Phone {
 	
 	/**
 	 * Constructor sets phone number
-	 * @param phoneNumber
+	 * @param phoneNumber the phone number encapsulated by this class
 	 *************************************************************/
 	public Phone(String phoneNumber){
 		this.phoneNumber = phoneNumber;
@@ -35,7 +35,7 @@ public class Phone {
 	
 	/**
 	 * Returns the string for phone number
-	 * @return phoneNumber
+	 * @return phoneNumber the phone number encapsulated by this class
 	 *************************************************************/
 	public String getPhone() {
 		return phoneNumber;
@@ -45,7 +45,7 @@ public class Phone {
 	
 	/**
 	 * Sets the string for phone number
-	 * @param phoneNumber
+	 * @param phoneNumber the phone number encapsulated by this class
 	 *************************************************************/
 	public void setPhone(String phoneNumber) {
 		this.phoneNumber = phoneNumber;

@@ -12,14 +12,18 @@
  *
  * **************************************************************/
 
-
 import symphony.domain.Address;
-import symphony.domain.Conductor;
+import symphony.domain.Composer;
+import symphony.domain.Composition;
+import symphony.domain.CompositionBuilder;
+import symphony.domain.Identification;
 import symphony.domain.Name;
 import symphony.domain.Phone;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import org.junit.Test;
+
+import java.util.Vector;
 
 import org.junit.Before;
 /**
@@ -28,24 +32,24 @@ import org.junit.Before;
  * @author    Victoria Sawyer
  * @version   1.0.0 2016-11-25
  */
-public class Test_Conductor extends TestCase{
+public class Test_Composer extends TestCase{
 	
 	/**
 	 * Default constructor that calls the superclass constructor
 	 * 
 	 * @param name the name of the test
 	 *************************************************************/
-	public Test_Conductor(String name) {
+	public Test_Composer(String name) {
 		super(name);
 	}
 
 	/**
-	 * Creates an instance of a TestSuite and passes the Test_Conductor
+	 * Creates an instance of a TestSuite and passes the Test_Composer
 	 * class as a parameter.	 
 	 * @return an instance of TestSuite
 	 *************************************************************/
 	public static TestSuite suite() {
-		return new TestSuite(Test_Conductor.class);
+		return new TestSuite(Test_Composer.class);
 	}
 	
 	/**
@@ -53,7 +57,7 @@ public class Test_Conductor extends TestCase{
 	 * 
 	 *************************************************************/
 	protected void tearDown() throws Exception {
-		System.out.println("Test_Conductor End");
+		System.out.println("Test_Composer End");
 	}
 	
 	/**
@@ -61,8 +65,8 @@ public class Test_Conductor extends TestCase{
 	 *************************************************************/
 	@Before
 	public void setUp() throws Exception {
-		System.out.println("Test_Conductor Begin");		
-		conductor = new Conductor(null, null, null);
+		System.out.println("Test_Composer Begin");		
+		composer = new Composer(null, null, null, null);
 	}
 	
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
@@ -71,31 +75,47 @@ public class Test_Conductor extends TestCase{
 	 * Test constructor
 	 *************************************************************/
 	@Test
-	public void testConductorConstructor(){
-		System.out.println("\t\t Test_Conductor.testConductorConstructor");
+	public void testComposerConstructor(){
+		System.out.println("\t\t Test_Address.testComposerConstructor");
 		
-		Conductor test = new Conductor(null, null, null);
+		Composer test = new Composer(null, null, null, null);
 		
-		assertTrue("\tTesting Conductor default constructor", test instanceof Conductor);
-		assertNotNull("\tTesting Conductor default constructor", test);
+		assertTrue("\tTesting Comoposer default constructor", test instanceof Composer);
+		assertNotNull("\tTesting Composer default constructor", test);
 	}
 
 
 	/* ACCESSORS	-----------------------------------------------------	*/
+	
+	/**
+	 * Test accessor getCompositions
+	 *************************************************************/
+	@Test
+	public void testGetCompositions(){
+		System.out.println("\t\t Test_Composer.testGetCompositions");
+		
+		CompositionBuilder builder = new CompositionBuilder(new Identification("test"), new Name());
+		Composition composition = Composition.getComposition(builder);
+		Vector<Composition> vector = new Vector<>();
+		vector.add(composition);
+		composer.setCompositions(vector);
+		
+		assertTrue("\tTesting Composer getCompositions method", composer.getCompositions().contains(composition));	
+	}
 
 	/**
 	 * Test accessor getName
 	 *************************************************************/
 	@Test
 	public void testGetName(){
-		System.out.println("\t\t Test_Conductor.testGetName");
+		System.out.println("\t\t Test_Composer.testGetName");
 		
 		String nameString = "Test Name";
 		Name name = new Name();
 		name.setName(nameString);
-		conductor.setName(name);
+		composer.setName(name);
 		
-		assertTrue("\tTesting Conductor getName method", conductor.getName().equals(name));	
+		assertTrue("\tTesting Composer getName method", composer.getName().equals(name));	
 	}
 
 	/**
@@ -103,14 +123,14 @@ public class Test_Conductor extends TestCase{
 	 *************************************************************/
 	@Test
 	public void testGetAddress(){
-		System.out.println("\t\t Test_Conductor.testGetAddress");
+		System.out.println("\t\t Test_Composer.testGetAddress");
 		
 		String location = "1385 Woodroffe Ave, Nepean, ON K2G 1V8";
 		Address address = new Address();
 		address.setAddress(location);
-		conductor.setAddress(address);
+		composer.setAddress(address);
 		
-		assertTrue("\tTesting Conductor getAddress method", conductor.getAddress().equals(address));	
+		assertTrue("\tTesting Composer getAddress method", composer.getAddress().equals(address));	
 	}
 
 	/**
@@ -118,29 +138,45 @@ public class Test_Conductor extends TestCase{
 	 *************************************************************/
 	@Test
 	public void testGetPhone(){
-		System.out.println("\t\t Test_Conductor.testGetPhone");
+		System.out.println("\t\t Test_Composer.testGetPhone");
 		
 		Phone phone = new Phone("555-111");
-		conductor.setPhone(phone);
+		composer.setPhone(phone);
 		
-		assertTrue("\tTesting Conductor getPhone method", conductor.getPhone().equals(phone));	
+		assertTrue("\tTesting Composer getPhone method", composer.getPhone().equals(phone));	
 	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
+	
+	/**
+	 * Test modifier setCompositions
+	 *************************************************************/
+	@Test
+	public void testSetCompositions(){
+		System.out.println("\t\t Test_Composer.testSetCompositions");
+		
+		CompositionBuilder builder = new CompositionBuilder(new Identification("test"), new Name());
+		Composition composition = Composition.getComposition(builder);
+		Vector<Composition> vector = new Vector<>();
+		vector.add(composition);
+		composer.setCompositions(vector);
+		
+		assertTrue("\tTesting Address setAddress method", composer.getCompositions().contains(composition));		
+	}
 
 	/**
 	 * Test modifier setName
 	 *************************************************************/
 	@Test
 	public void testSetName(){
-		System.out.println("\t\t Test_Conductor.testSetName");
+		System.out.println("\t\t Test_Composer.testSetName");
 		
 		String nameString = "Test Name";
 		Name name = new Name();
 		name.setName(nameString);
-		conductor.setName(name);
+		composer.setName(name);
 		
-		assertTrue("\tTesting Conductor setName method", conductor.getName().equals(name));	
+		assertTrue("\tTesting Composer setName method", composer.getName().equals(name));	
 	}
 
 	/**
@@ -153,9 +189,9 @@ public class Test_Conductor extends TestCase{
 		String location = "1385 Woodroffe Ave, Nepean, ON K2G 1V8";
 		Address address = new Address();
 		address.setAddress(location);
-		conductor.setAddress(address);
+		composer.setAddress(address);
 		
-		assertTrue("\tTesting Conductor setAddress method", conductor.getAddress().equals(address));		
+		assertTrue("\tTesting Composer setAddress method", composer.getAddress().equals(address));		
 	}
 
 	/**
@@ -163,12 +199,12 @@ public class Test_Conductor extends TestCase{
 	 *************************************************************/
 	@Test
 	public void testSetPhone(){
-		System.out.println("\t\t Test_Conductor.testSetPhone");
+		System.out.println("\t\t Test_Composer.testSetPhone");
 		
 		Phone phone = new Phone("555-111");
-		conductor.setPhone(phone);
+		composer.setPhone(phone);
 		
-		assertTrue("\tTesting Conductor setPhone method", conductor.getPhone().equals(phone));	
+		assertTrue("\tTesting Composer setPhone method", composer.getPhone().equals(phone));	
 	}
 
 	/* NORMAL BEHAVIOR --------------------------------------------------	*/
@@ -177,6 +213,6 @@ public class Test_Conductor extends TestCase{
 
 	/* ATTRIBUTES	-----------------------------------------------------	*/											
 
-	Conductor conductor;
+	Composer composer;
 
-}	/*	End of CLASS:	Test_Conductor.java			*/
+}	/*	End of CLASS:	Test_Composer.java			*/

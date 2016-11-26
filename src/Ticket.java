@@ -11,7 +11,7 @@
  * Due date: 2016.11.27
  *
  * **************************************************************/
-package symphony.domain;
+
 /**
  * Ticket creates a ticket that belongs to a Venue and is used by Transaction.
  * It makes use of Identification and Venue classes.

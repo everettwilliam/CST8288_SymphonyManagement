@@ -13,7 +13,7 @@
  *  -- Class definition 				   
  * Purpose -- 
  * **************************************************************/
-package symphony.domain;
+
 
 /**
  * This class builds a Day parameter

@@ -13,7 +13,7 @@
  *  -- Class definition 				   
  * Purpose -- 
  * **************************************************************/
-package symphony.domain;
+
 /**
  * MovementBuilder is used to build Movement.
  * It makes use of Name and Identification. 

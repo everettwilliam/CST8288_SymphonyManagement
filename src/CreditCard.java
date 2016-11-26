@@ -14,7 +14,7 @@
  * Purpose -- 
  * **************************************************************/
 
-package symphony.domain;
+
 /**
  * Description of this class.
  * @author    EVERETT HOLDEN

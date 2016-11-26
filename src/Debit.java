@@ -14,7 +14,7 @@
  * Purpose -- 
  * **************************************************************/
 
-package symphony.domain;
+
 /**
  * Represents a debit transaction
  * Has an identifer, a date and a debit cart associated with the transaction

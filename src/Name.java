@@ -13,7 +13,7 @@
  *  -- Class definition 				   
  * Purpose -- 
  * **************************************************************/
-package symphony.domain;
+
 /**
  * Description of this class.
  * @author    Tejasvi Jani

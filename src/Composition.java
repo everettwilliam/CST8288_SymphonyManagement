@@ -10,10 +10,8 @@
  * Section: 014
  * Due date: 2016.11.27
  *
- *  -- Class definition 				   
- * Purpose -- 
  * **************************************************************/
-package symphony.domain;
+
 
 import java.util.Vector;
 
@@ -21,7 +19,7 @@ import symphony.domain.CompositionBuilder;
 import symphony.domain.Identification;
 
 /**
- * This 
+ * This class builds a Composition using the CompositionBuilder.
  * 
  * @author    Victoria Sawyer
  * @version   1.0.0 2016-11-21

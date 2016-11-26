@@ -13,7 +13,7 @@
  *  -- Class definition 				   
  * Purpose -- 
  * **************************************************************/
-package symphony.domain;
+
 
 import java.util.Vector;
 

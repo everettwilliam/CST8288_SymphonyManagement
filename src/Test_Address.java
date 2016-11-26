@@ -13,7 +13,7 @@
  *  -- Class definition 				   
  * Purpose -- 
  * **************************************************************/
-package symphony.test;
+
 import symphony.domain.Address;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;

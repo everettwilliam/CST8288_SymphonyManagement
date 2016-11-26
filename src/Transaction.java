@@ -11,12 +11,7 @@
  * Due date: 2016.11.27
  *
  * **************************************************************/
-package symphony.domain;
-/**
- * Description of this class.
- * @author    Victoria Sawyer
- * @version   1.0.0 2016-11-22
- */
+
 
 import java.util.Iterator;
 import java.util.Vector;

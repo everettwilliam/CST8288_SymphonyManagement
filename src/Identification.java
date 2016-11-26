@@ -13,7 +13,7 @@
  *  -- Class definition 				   
  * Purpose -- 
  * **************************************************************/
-package symphony.domain;
+
 
 /**
  * This class verifies the identification (ID) of the person.

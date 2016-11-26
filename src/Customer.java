@@ -11,7 +11,7 @@
  * Due date: 2016.11.27
  *
  * **************************************************************/
-package symphony.domain;
+
 
 import java.util.Vector;
 
@@ -21,7 +21,7 @@ import java.util.Vector;
  * @author    Victoria Sawyer
  * @version   1.0.0 2016-11-24
  */
-public class Conductor extends Person {
+public class Customer extends Person {
 	
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
 	

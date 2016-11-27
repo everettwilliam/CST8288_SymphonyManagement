@@ -125,7 +125,7 @@ public class Test_Season extends TestCase{
 	public void testToString(){
 		System.out.println("\t\t Test_Season.testToString");	
 
-		assertFalse("\tTesting Season setSeasonLength method",  season.toString().equals(""));
+		assertFalse("\tTesting Season setSeasonLength method",  season.toString().equals("The concert season begins on 20161124 and is 2 days long."));
 	}
 	
 	/* ATTRIBUTES	-----------------------------------------------------	*/	

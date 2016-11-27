@@ -21,7 +21,7 @@ import java.util.ArrayList;
  * @author    Name
  * @version   1.0.0 Date
  */
-public class Season extends ArrayList {
+public class Season extends ArrayList<Concert> {
 
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
 	
@@ -32,9 +32,8 @@ public class Season extends ArrayList {
 	 * @param openingDate	Date
 	 * @param length		int
 	 */
-	public Season(Date openingDate, int length) {
-		this.openingDate = openingDate;
-		this.seasonLength = length;
+	private Season() {
+		
 	}
 
 	/* ACCESSORS	-----------------------------------------------------	*/
@@ -69,6 +68,25 @@ public class Season extends ArrayList {
 	}
 
 	/* HELPER METHODS	--------------------------------------------------	*/
+	
+	/**
+	 * Method returns the static Season variable, the only instance
+	 * of the Season class
+	 * @return season the only instance of season
+	 */
+	public static Season season(){
+		return season;
+	}
+	
+	/**
+	 * Adds a concert to the season.
+	 * 
+	 * @param concert the concert object to add to the season
+	 * @return boolean
+	 */
+	public boolean addConcert(Concert concert){		
+		return super.add(concert);
+	}
 
 	/**
 	 * Outpus a string that gives the opening date of the season and its length in days.
@@ -90,5 +108,10 @@ public class Season extends ArrayList {
 	 * An int object that represents the length of the season in days.
 	 */
 	private int seasonLength;
+	
+	/**
+	 * The only instance of Season available
+	 */
+	private static Season season = new Season();
 
 }	/*	End of CLASS:	Season.java			*/

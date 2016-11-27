@@ -64,19 +64,9 @@ public class Test_Season extends TestCase{
 	public void setUp() throws Exception {
 		System.out.println("Test_Season Begin");	
 		
-		Date date = new DateBuilder(new Year(2016), new Month(11), new Day(24)).build();
-		season = new Season(date, 1);
 	}
 
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
-	
-	@Test
-	public void testSeasonConstructor(){
-		System.out.println("\t\t Test_Season.testSeasonConstructor");		
-
-		assertNotNull("\tTesting Season constructor", season);
-		assertTrue("\tTesting Season constructor", season instanceof Season);
-	}	
 
 	/* ACCESSORS	-----------------------------------------------------	*/
 

@@ -22,7 +22,7 @@ import java.util.ArrayList;
  * @author    Victoria Sawyer
  * @version   1.0.0 2016-11-24
  */
-public class Performance extends ArrayList<Composition> {
+public class Performance<Composition> extends ArrayList<Composition> {
 
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
 	
@@ -56,6 +56,10 @@ public class Performance extends ArrayList<Composition> {
 	}
 
 	/* HELPER METHODS	--------------------------------------------------	*/
+	
+	public boolean add(Composition compositon){
+		return super.add(compositon);
+	}
 
 	/**
 	 * Output the Date of the Performance to a string.

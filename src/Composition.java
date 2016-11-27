@@ -35,6 +35,7 @@ public class Composition {
 	 * @param	builder		CompositionBuilder
 	 */
 	private Composition(CompositionBuilder builder) {
+		
 		this.compositionID = builder.getID();
 		this.compositionName = builder.getName();
 		this.composer = builder.getComposer();

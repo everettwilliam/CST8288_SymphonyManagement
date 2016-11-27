@@ -30,7 +30,6 @@ import symphony.domain.DateBuilder;
 import symphony.domain.Day;
 
 import org.junit.Test;
-import java.util.Vector;
 import org.junit.Before;
 /**
  * Description of this class.

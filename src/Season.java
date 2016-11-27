@@ -3,7 +3,7 @@
  * CST 8288 - Object Oriented Programming with Design Patterns
  * Project 1 - Symphony Management System
  * 
- * Author: 
+ * Author: VICTORIA SAWYER
  * Student #: 
  * Network login name: 
  * Lab instructor: CAROLYN A. MACISAAC
@@ -17,9 +17,10 @@ package symphony.domain;
 
 import java.util.ArrayList;
 /**
- * Description of this class.
- * @author    Name
- * @version   1.0.0 Date
+ * The season class represents a season that has scheduled
+ * a number of concerts.
+ * @author    VICTORIA SAWYER
+ * @version   1.0.0 2016.11.26
  */
 public class Season extends ArrayList<Concert> {
 

@@ -16,9 +16,7 @@
 package symphony.domain;
 
 /**
- * This class displays the address
- * 
- * 
+ * This class encapsulates address information 
  * @author Nadia Chubarev
  * @version 1.0.0 November 20, 2016
  */

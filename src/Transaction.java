@@ -12,8 +12,10 @@
  *
  * **************************************************************/
 package symphony.domain;
+
 /**
- * Description of this class.
+ * The transaction class represents information gathered in 
+ * a transaction for purchasing tickets at a venue for a concert
  * @author    Victoria Sawyer
  * @version   1.0.0 2016-11-22
  */

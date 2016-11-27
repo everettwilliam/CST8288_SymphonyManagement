@@ -15,7 +15,8 @@
  * **************************************************************/
 package symphony.domain;
 /**
- * Description of this class.
+ * The time class encapsulated data used to represent
+ * a time stamp
  * @author    Tejasvi Jani	
  * @version   1.0.0 Date: 11/17/2016
  */

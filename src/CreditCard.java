@@ -16,7 +16,8 @@
 
 package symphony.domain;
 /**
- * Description of this class.
+ * The CreditCard class stores information related to a 
+ * physical credit card.
  * @author    EVERETT HOLDEN
  * @version   1.0.0 2016.11.22
  */

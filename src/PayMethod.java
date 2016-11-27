@@ -16,7 +16,7 @@
 
 package symphony.domain;
 /**
- * Description of this interface.
+ * This interface specifies a payment method.
  * @author    EVERETT HOLDEN
  * @version   1.0.0 2016.11.22
  */

@@ -21,8 +21,8 @@ import symphony.domain.CompositionBuilder;
 import symphony.domain.Identification;
 
 /**
- * This 
- * 
+ * This class encapsulates information related to pieces of
+ * music, specifically a composition of one or more movements. 
  * @author    Victoria Sawyer
  * @version   1.0.0 2016-11-21
  */

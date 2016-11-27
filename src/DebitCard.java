@@ -16,7 +16,8 @@
 
 package symphony.domain;
 /**
- * Description of this class.
+ * The DebitCard class represents the information related
+ * to a physical debit card.
  * @author    EVERETT HOLDEN
  * @version   1.0.0 2016.11.22
  */

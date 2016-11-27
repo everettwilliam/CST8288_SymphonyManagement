@@ -15,7 +15,8 @@
  * **************************************************************/
 package symphony.domain;
 /**
- * Description of this class.
+ * The year class encapsulates an integer that represents
+ * a year.
  * @author    Tejasvi Jani	
  * @version   1.0.0 Date: 11/17/2016
  */

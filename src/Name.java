@@ -15,7 +15,8 @@
  * **************************************************************/
 package symphony.domain;
 /**
- * Description of this class.
+ * This class encapsulates a string that represents a
+ * persons name.
  * @author    Tejasvi Jani
  * @version   1.0.0 Date 11/17/2016
  */

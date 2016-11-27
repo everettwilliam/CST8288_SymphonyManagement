@@ -15,7 +15,8 @@
  * **************************************************************/
 package symphony.domain;
 /**
- * Description of this class.
+ * This abstract class represents a person with name,
+ * address, phone number.
  * @author    EVERETT HOLDEN
  * @version   1.0.0 2016.11.24
  */

@@ -11,10 +11,10 @@
  * Due date: 2016.11.27
  *
  * **************************************************************/
-package symphony.test;
 
+package symphony.test;
 import symphony.domain.Address;
-import symphony.domain.Conductor;
+import symphony.domain.Customer;
 import symphony.domain.Name;
 import symphony.domain.Phone;
 import junit.framework.TestCase;
@@ -28,24 +28,24 @@ import org.junit.Before;
  * @author    Victoria Sawyer
  * @version   1.0.0 2016-11-25
  */
-public class Test_Conductor extends TestCase{
+public class Test_Customer extends TestCase{
 	
 	/**
 	 * Default constructor that calls the superclass constructor
 	 * 
 	 * @param name the name of the test
 	 *************************************************************/
-	public Test_Conductor(String name) {
+	public Test_Customer(String name) {
 		super(name);
 	}
 
 	/**
-	 * Creates an instance of a TestSuite and passes the Test_Conductor
+	 * Creates an instance of a TestSuite and passes the Test_Customer
 	 * class as a parameter.	 
 	 * @return an instance of TestSuite
 	 *************************************************************/
 	public static TestSuite suite() {
-		return new TestSuite(Test_Conductor.class);
+		return new TestSuite(Test_Customer.class);
 	}
 	
 	/**
@@ -53,7 +53,7 @@ public class Test_Conductor extends TestCase{
 	 * 
 	 *************************************************************/
 	protected void tearDown() throws Exception {
-		System.out.println("Test_Conductor End");
+		System.out.println("Test_Customer End");
 	}
 	
 	/**
@@ -61,8 +61,8 @@ public class Test_Conductor extends TestCase{
 	 *************************************************************/
 	@Before
 	public void setUp() throws Exception {
-		System.out.println("Test_Conductor Begin");		
-		conductor = new Conductor(null, null, null);
+		System.out.println("Test_Customer Begin");		
+		customer = new Customer(null, null, null);
 	}
 	
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
@@ -71,13 +71,13 @@ public class Test_Conductor extends TestCase{
 	 * Test constructor
 	 *************************************************************/
 	@Test
-	public void testConductorConstructor(){
-		System.out.println("\t\t Test_Conductor.testConductorConstructor");
+	public void testCustomerConstructor(){
+		System.out.println("\t\t Test_Customer.testCustomerConstructor");
 		
-		Conductor test = new Conductor(null, null, null);
+		Customer test = new Customer(null, null, null);
 		
-		assertTrue("\tTesting Conductor default constructor", test instanceof Conductor);
-		assertNotNull("\tTesting Conductor default constructor", test);
+		assertTrue("\tTesting Customer default constructor", test instanceof Customer);
+		assertNotNull("\tTesting Customer default constructor", test);
 	}
 
 
@@ -88,14 +88,14 @@ public class Test_Conductor extends TestCase{
 	 *************************************************************/
 	@Test
 	public void testGetName(){
-		System.out.println("\t\t Test_Conductor.testGetName");
+		System.out.println("\t\t Test_Customer.testGetName");
 		
 		String nameString = "Test Name";
 		Name name = new Name();
 		name.setName(nameString);
-		conductor.setName(name);
+		customer.setName(name);
 		
-		assertTrue("\tTesting Conductor getName method", conductor.getName().equals(name));	
+		assertTrue("\tTesting Customer getName method", customer.getName().equals(name));	
 	}
 
 	/**
@@ -103,14 +103,14 @@ public class Test_Conductor extends TestCase{
 	 *************************************************************/
 	@Test
 	public void testGetAddress(){
-		System.out.println("\t\t Test_Conductor.testGetAddress");
+		System.out.println("\t\t Test_Customer.testGetAddress");
 		
 		String location = "1385 Woodroffe Ave, Nepean, ON K2G 1V8";
 		Address address = new Address();
 		address.setAddress(location);
-		conductor.setAddress(address);
+		customer.setAddress(address);
 		
-		assertTrue("\tTesting Conductor getAddress method", conductor.getAddress().equals(address));	
+		assertTrue("\tTesting Customer getAddress method", customer.getAddress().equals(address));	
 	}
 
 	/**
@@ -118,12 +118,12 @@ public class Test_Conductor extends TestCase{
 	 *************************************************************/
 	@Test
 	public void testGetPhone(){
-		System.out.println("\t\t Test_Conductor.testGetPhone");
+		System.out.println("\t\t Test_Customer.testGetPhone");
 		
 		Phone phone = new Phone("555-111");
-		conductor.setPhone(phone);
+		customer.setPhone(phone);
 		
-		assertTrue("\tTesting Conductor getPhone method", conductor.getPhone().equals(phone));	
+		assertTrue("\tTesting Customer getPhone method", customer.getPhone().equals(phone));	
 	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
@@ -133,14 +133,14 @@ public class Test_Conductor extends TestCase{
 	 *************************************************************/
 	@Test
 	public void testSetName(){
-		System.out.println("\t\t Test_Conductor.testSetName");
+		System.out.println("\t\t Test_Customer.testSetName");
 		
 		String nameString = "Test Name";
 		Name name = new Name();
 		name.setName(nameString);
-		conductor.setName(name);
+		customer.setName(name);
 		
-		assertTrue("\tTesting Conductor setName method", conductor.getName().equals(name));	
+		assertTrue("\tTesting Customer setName method", customer.getName().equals(name));	
 	}
 
 	/**
@@ -153,9 +153,9 @@ public class Test_Conductor extends TestCase{
 		String location = "1385 Woodroffe Ave, Nepean, ON K2G 1V8";
 		Address address = new Address();
 		address.setAddress(location);
-		conductor.setAddress(address);
+		customer.setAddress(address);
 		
-		assertTrue("\tTesting Conductor setAddress method", conductor.getAddress().equals(address));		
+		assertTrue("\tTesting Customer setAddress method", customer.getAddress().equals(address));		
 	}
 
 	/**
@@ -163,12 +163,12 @@ public class Test_Conductor extends TestCase{
 	 *************************************************************/
 	@Test
 	public void testSetPhone(){
-		System.out.println("\t\t Test_Conductor.testSetPhone");
+		System.out.println("\t\t Test_Customer.testSetPhone");
 		
 		Phone phone = new Phone("555-111");
-		conductor.setPhone(phone);
+		customer.setPhone(phone);
 		
-		assertTrue("\tTesting Conductor setPhone method", conductor.getPhone().equals(phone));	
+		assertTrue("\tTesting Customer setPhone method", customer.getPhone().equals(phone));	
 	}
 
 	/* NORMAL BEHAVIOR --------------------------------------------------	*/
@@ -177,6 +177,6 @@ public class Test_Conductor extends TestCase{
 
 	/* ATTRIBUTES	-----------------------------------------------------	*/											
 
-	Conductor conductor;
+	Customer customer;
 
-}	/*	End of CLASS:	Test_Conductor.java			*/
+}	/*	End of CLASS:	Test_Composer.java			*/

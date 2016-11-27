@@ -11,7 +11,9 @@
  * Due date: 2016.11.27
  *
  * **************************************************************/
+
 package symphony.domain;
+
 /**
  * ConcertBuilder is used to build Concert.
  * It makes use of Conductor, Identification,Performance, Date, and Venue classes.

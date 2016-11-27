@@ -3,42 +3,40 @@
  * CST 8288 - Object Oriented Programming with Design Patterns
  * Project 1 - Symphony Management System
  * 
- * Author: EVERETT HOLDEN
- * Student #: 040812130
- * Network login name: hold0052
+ * Author: Victoria Sawyer
+ * Student #: 040633981
+ * Network login name: sawy0025
  * Lab instructor: CAROLYN A. MACISAAC
  * Section: 014
  * Due date: 2016.11.27
  *
- *  -- Class definition 				   
- * Purpose -- 
  * **************************************************************/
-package symphony.domain;
-/**
- * Represents a Customer 
- * @author    EVERETT HOLDEN
- * @version   1.0.0 2016.11.25
- */
-public class Customer extends Person{
 
+package symphony.domain;
+
+import java.util.Vector;
+
+/**
+ * This class extends Person to create Customer.
+ * 
+ * @author    Victoria Sawyer
+ * @version   1.0.0 2016-11-24
+ */
+public class Customer extends Person {
+	
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
 	
 	/**
-	 * Constructor sets name, address and phone
-	 * @param name the name of the customer
-	 * @param address the address where the customer resides
-	 * @param phone the customers contact number
-	 *************************************************************/
-	public Customer(Name name, Address address, Phone phone){
+	 * Customer uses the super constructor from person to set Name, Address, and Phone.
+	 * It makes use of Name, Address, and Phone.
+	 * 
+	 * @param 	name			Name
+	 * @param 	address			Address
+	 * @param 	phone			Phone
+	 */
+	public Customer(Name name, Address address, Phone phone) {
 		super(name, address, phone);
 	}
 
-
-	/* ACCESSORS	-----------------------------------------------------	*/
-	/* MODIFIERS	-----------------------------------------------------	*/
-	/* NORMAL BEHAVIOR --------------------------------------------------	*/
-	/* HELPER METHODS	--------------------------------------------------	*/
-	/* ATTRIBUTES	-----------------------------------------------------	*/
-	
 }	/*	End of CLASS:	Customer.java			*/
 

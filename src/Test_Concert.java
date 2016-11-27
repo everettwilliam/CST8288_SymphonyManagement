@@ -16,6 +16,17 @@
 package symphony.test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import symphony.domain.Address;
+import symphony.domain.Concert;
+import symphony.domain.ConcertBuilder;
+import symphony.domain.Date;
+import symphony.domain.DateBuilder;
+import symphony.domain.Day;
+import symphony.domain.Identification;
+import symphony.domain.Month;
+import symphony.domain.Venue;
+import symphony.domain.Year;
+
 import org.junit.Test;
 import org.junit.Before;
 /**
@@ -57,33 +68,36 @@ public class Test_Concert extends TestCase{
 	 *************************************************************/
 	@Before
 	public void setUp() throws Exception {
-		System.out.println("Test_Concert Begin");		
+		System.out.println("Test_Concert Begin");	
+		
+		Identification id = new Identification("test");
+		Date date = new DateBuilder(new Year(2016), new Month(11), new Day(24)).build();
+		Venue venue = new Venue(new Address("testVenue"), 10);
+		builder = new ConcertBuilder(id, date, venue);	
 	}
 
 	/* CONSTRUCTORS	-----------------------------------------------------	*/
-	
-
 
 	/* ACCESSORS	-----------------------------------------------------	*/
-	
 
+	/**
+	 * Test getConcert method
+	 *************************************************************/
+	@Test
+	public void testGetConcert(){
+		System.out.println("\t\t Test_Concert.testGetConcert");			
+				
+		assertTrue("\tTesting Composition getComposition method", Concert.getConcert(builder) instanceof Concert );
+	}
 
 	/* MODIFIERS	-----------------------------------------------------	*/
-	
-
 
 	/* NORMAL BEHAVIOR --------------------------------------------------	*/
 	
-
-
-
 	/* HELPER METHODS	--------------------------------------------------	*/
-
-
-
 
 	/* ATTRIBUTES	-----------------------------------------------------	*/											
 
-
+	ConcertBuilder builder;
 
 }	/*	End of CLASS:	Test_Concert.java			*/

@@ -11,6 +11,7 @@
  * Due date: 2016.11.27
  *
  * **************************************************************/
+
 package symphony.domain;
 /**
  * This class uses ConcertBuilder to create a Concert.
